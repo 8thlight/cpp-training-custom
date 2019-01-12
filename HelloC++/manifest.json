@@ -1,0 +1,13 @@
+{
+  "display_name": "Hello C++",
+  "visible_filenames": [
+    "hello.cpp",
+    "cyber-dojo.sh",
+    "instructions"
+  ],
+  "highlight_filenames": ["hello.cpp"],
+  "runner_choice":"stateless",
+  "image_name": "cyberdojofoundation/gpp_googletest",
+  "filename_extension": ".cpp",
+  "tab_size": 4
+}
