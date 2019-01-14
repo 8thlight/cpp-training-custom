@@ -10,6 +10,7 @@ naming conflicts in projects.
 
 See namespaces.cpp for examples.
 
+
 References (references.cpp)
 ---------------------------
 
@@ -24,3 +25,13 @@ it is more typically a reference.
 
 Take a look at references.cpp to get a feel for syntax
 and usage.
+
+
+Functions (functions.cpp)
+-------------------------
+
+What can be different about the humble function I hear
+you ask?
+
+Open functions.cpp to find out about function overloading
+and default parameters.

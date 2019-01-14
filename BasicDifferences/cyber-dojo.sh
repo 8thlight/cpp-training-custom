@@ -1,4 +1,4 @@
-g++ -std=c++17 -c main.cpp
+g++ -std=c++17 -c main.cpp namespaces.cpp references.cpp functions.cpp
 if [ $? != 0 ]; then
   echo
   echo ">>> [compilation failed]"
@@ -7,6 +7,6 @@ if [ $? != 0 ]; then
 fi
 
 mkdir -p bin
-g++ -std=c++17 main.cpp namespaces.cpp references.cpp -o bin/main
+g++ -std=c++17 main.cpp namespaces.cpp references.cpp functions.cpp -o bin/main
 rm -f *.o
 bin/main
