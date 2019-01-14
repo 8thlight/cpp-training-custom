@@ -1,0 +1,16 @@
+{
+  "display_name": "2, Basic Differences",
+  "visible_filenames": [
+    "instructions",
+    "basic_class.cpp",
+    "Game.cpp",
+    "Game.hpp",
+    "main.cpp",
+    "cyber-dojo.sh"
+  ],
+  "highlight_filenames": ["instructions"],
+  "runner_choice":"stateless",
+  "image_name": "cyberdojofoundation/gpp_googletest",
+  "filename_extension": ".cpp",
+  "tab_size": 4
+}
