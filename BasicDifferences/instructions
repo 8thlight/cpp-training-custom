@@ -1,6 +1,15 @@
 In this exercise we will look at a few basic features
 of C++ that you may not be familiar with from C.
 
+Namespaces (namespaces.cpp)
+---------------------------
+
+Time to find out about the "using namespace std" we
+saw in the C++ hello world. Namespaces help us prevent
+naming conflicts in projects.
+
+See namespaces.cpp for examples.
+
 References (references.cpp)
 ---------------------------
 

@@ -2,6 +2,8 @@
   "display_name": "2, Basic Differences",
   "visible_filenames": [
     "instructions",
+    "namespaces.cpp",
+    "namespaces.hpp",
     "references.cpp",
     "references.hpp",
     "main.cpp",

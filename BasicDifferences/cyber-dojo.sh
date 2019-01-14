@@ -7,6 +7,6 @@ if [ $? != 0 ]; then
 fi
 
 mkdir -p bin
-g++ -std=c++17 main.cpp references.cpp -o bin/main
+g++ -std=c++17 main.cpp namespaces.cpp references.cpp -o bin/main
 rm -f *.o
 bin/main
