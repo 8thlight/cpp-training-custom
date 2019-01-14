@@ -1,8 +1,9 @@
 {
-  "display_name": "2, Basic Differences",
+  "display_name": "3, C++ 101",
   "visible_filenames": [
     "instructions",
     "basic_class.cpp",
+    "Bowling.cpp",
     "Game.cpp",
     "Game.hpp",
     "main.cpp",
