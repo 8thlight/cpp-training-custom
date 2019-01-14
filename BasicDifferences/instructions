@@ -35,3 +35,14 @@ you ask?
 
 Open functions.cpp to find out about function overloading
 and default parameters.
+
+
+Exceptions (exceptions.cpp)
+---------------------------
+
+In standard C++ error handling is frequently done with
+exceptions. This may not be the case in embedded environments
+but we will take a quick look so that you are at least familiar
+with the syntax if you see it in the wild.
+
+See exceptions.cpp

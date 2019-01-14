@@ -8,6 +8,8 @@
     "references.hpp",
     "functions.cpp",
     "functions.hpp",
+    "exceptions.cpp",
+    "exceptions.hpp",
     "main.cpp",
     "cyber-dojo.sh"
   ],
