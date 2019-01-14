@@ -28,6 +28,12 @@ namespace training {
     cout << "I'm a non-const ref customer " << c.id << endl;
   }
 
+  // functions that differ only in return type are ambiguous
+  // this will not compile:
+  //int foo(Customer& c) {
+  //  return 0;
+  //}
+
   void functionOverloading() {
     foo(1);
     foo(2, "hello");
