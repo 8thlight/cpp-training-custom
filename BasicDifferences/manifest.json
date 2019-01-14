@@ -6,6 +6,8 @@
     "namespaces.hpp",
     "references.cpp",
     "references.hpp",
+    "functions.cpp",
+    "functions.hpp",
     "main.cpp",
     "cyber-dojo.sh"
   ],
