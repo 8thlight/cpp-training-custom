@@ -1,4 +1,4 @@
-g++ -std=c++17 -c main.cpp basic_class.cpp Game.cpp Bowling.cpp
+g++ -std=c++17 -c basic_class.cpp Game.cpp Bowling.cpp
 if [ $? != 0 ]; then
   echo
   echo ">>> [compilation failed]"
@@ -7,6 +7,6 @@ if [ $? != 0 ]; then
 fi
 
 mkdir -p bin
-g++ -std=c++17 main.cpp basic_class.cpp Game.cpp Bowling.cpp -o bin/main
+g++ -std=c++17 basic_class.cpp Game.cpp Bowling.cpp -lgtest -lgtest_main -pthread -o bin/main
 rm -f *.o
 bin/main

@@ -6,7 +6,6 @@
     "Bowling.cpp",
     "Game.cpp",
     "Game.hpp",
-    "main.cpp",
     "cyber-dojo.sh"
   ],
   "highlight_filenames": ["instructions"],
