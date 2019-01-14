@@ -1,0 +1,17 @@
+In this exercise we will look at a few basic features
+of C++ that you may not be familiar with from C.
+
+References (references.cpp)
+---------------------------
+
+What do you do when you want to pass something to a
+function that:
+
+ - would be expensive to take a copy of?
+ - you want to modify and see that modification at call point?
+
+In C you would typically reach for a pointer. In C++
+it is more typically a reference.
+
+Take a look at references.cpp to get a feel for syntax
+and usage.
