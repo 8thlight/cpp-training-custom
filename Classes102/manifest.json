@@ -1,0 +1,18 @@
+{
+  "display_name": "4, C++ 102",
+  "visible_filenames": [
+    "instructions",
+    "basic_functions.hpp",
+    "inheritance.cpp",
+    "polymorphism.cpp",
+    "animals_test.cpp",
+    "Animal.hpp",
+    "Animal.cpp",
+    "cyber-dojo.sh"
+  ],
+  "highlight_filenames": ["instructions"],
+  "runner_choice":"stateless",
+  "image_name": "cyberdojofoundation/gpp_googletest",
+  "filename_extension": ".cpp",
+  "tab_size": 4
+}
