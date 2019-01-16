@@ -7,7 +7,7 @@
 using namespace std;
 
 TEST(VectorTest, ConstructorInitialisation) {
-  vector<string> aVector = vector<string> {"hello", "world"};
+  vector<string> aVector = vector<string>{"hello", "world"};
 
   ASSERT_EQ(aVector.size(), 2);
   ASSERT_EQ(aVector[0], "hello");
@@ -99,11 +99,11 @@ TEST(VectorTest, IteratingOverVector) {
 }
 
 TEST(VectorTest, SortingVectorsBasic) {
-  vector<int> numbers {10, 30, 20, 50, 40, 90, 70, 60, 80};
+  vector<int> numbers{10, 30, 20, 50, 40, 90, 70, 60, 80};
 
   sort(numbers.begin(), numbers.end());
 
-  vector<int> sorted {10, 20, 30, 40, 50, 60, 70, 80, 90};
+  vector<int> sorted{10, 20, 30, 40, 50, 60, 70, 80, 90};
   ASSERT_EQ(sorted, numbers);
 }
 
@@ -115,7 +115,7 @@ class Person {
   Person(string name, int age);
   int getAge() const;
   string getName() const;
-  bool operator == (const Person& other) const;
+  bool operator==(const Person &other) const;
 };
 
 Person::Person(string name, int age) {
@@ -131,12 +131,12 @@ string Person::getName() const {
   return name;
 }
 
-bool Person::operator == (const Person& other) const {
+bool Person::operator==(const Person &other) const {
   return age == other.getAge() && name == other.getName();
 }
 
 struct ageSort {
-  bool operator() (const Person& person, const Person& other) {
+  bool operator()(const Person &person, const Person &other) {
     return person.getAge() < other.getAge();
   }
 };
@@ -170,7 +170,7 @@ TEST(VectorTest, SortingVectorsCustomClass) {
   nameSorted.emplace_back(person1);
 
   // Or we can use a lambda expression. For more details, see: https://en.cppreference.com/w/cpp/language/lambda
-  sort(people.begin(), people.end(), [](const Person& person, const Person& other) {
+  sort(people.begin(), people.end(), [](const Person &person, const Person &other) {
     return person.getName() < other.getName();
   });
   ASSERT_EQ(nameSorted, people);

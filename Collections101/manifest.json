@@ -1,0 +1,17 @@
+{
+  "display_name": "4, C++ 101 - Vectors and Maps",
+  "visible_filenames": [
+    "instructions",
+    "basic_vectors.cpp",
+    "basic_maps.cpp",
+    "roman_numerals_test.cpp",
+    "roman_numerals_converter.cpp",
+    "roman_numerals_converter.hpp",
+    "cyber-dojo.sh"
+  ],
+  "highlight_filenames": ["instructions"],
+  "runner_choice":"stateless",
+  "image_name": "cyberdojofoundation/gpp_googletest",
+  "filename_extension": ".cpp",
+  "tab_size": 4
+}
