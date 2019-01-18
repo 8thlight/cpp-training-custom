@@ -1,5 +1,5 @@
 
-g++ -std=c++17 -c basic_class.cpp Game.cpp Bowling.cpp
+g++ -std=c++17 -c basic_vector.cpp basic_map.cpp roman_numerals_test.cpp roman_numerals_converter.cpp
 if [ $? != 0 ]; then
   echo
   echo ">>> [compilation failed]"
