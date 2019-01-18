@@ -1,0 +1,13 @@
+{
+  "display_name": "0, OO C",
+  "visible_filenames": [
+    "instructions",
+    "example.c",
+    "cyber-dojo.sh"
+  ],
+  "highlight_filenames": ["instructions"],
+  "runner_choice":"stateless",
+  "image_name": "cyberdojofoundation/gcc",
+  "filename_extension": ".cpp",
+  "tab_size": 4
+}
