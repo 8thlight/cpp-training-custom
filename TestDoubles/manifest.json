@@ -1,0 +1,13 @@
+{
+  "display_name": "OO, Test Doubles",
+  "visible_filenames": [
+    "asteroid_test.cpp",
+    "Coordinate.h",
+    "cyber-dojo.sh"
+  ],
+  "highlight_filenames": ["asteroid_test.cpp"],
+  "runner_choice":"stateless",
+  "image_name": "cyberdojofoundation/gpp_googletest",
+  "filename_extension": ".cpp",
+  "tab_size": 4
+}
