@@ -1,13 +1,13 @@
 {
-  "display_name": "5, Inheritance and polymorphism",
+  "display_name": "5, Core class functions",
   "visible_filenames": [
     "instructions",
     "basic_functions.hpp",
-    "inheritance.cpp",
-    "polymorphism.cpp",
-    "animals_test.cpp",
-    "Animal.hpp",
-    "Animal.cpp",
+    "StringTest.cpp",
+    "String.hpp",
+    "String.cpp",
+    "CoordinateTest.cpp",
+    "Coordinate.hpp",
     "cyber-dojo.sh"
   ],
   "highlight_filenames": ["instructions"],

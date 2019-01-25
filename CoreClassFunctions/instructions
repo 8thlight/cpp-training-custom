@@ -30,21 +30,20 @@ Signatures of these functions are provided in
 basic_functions.hpp
 
 
-Inheritance / Polymorphism
---------------------------
+Exercise:
 
-Inheritance - sharing Code through parent/child relationships
-Polymorphism - allows routines to use variables of different
-               through a common interface
+Sometimes the compiler generated function does not produce
+what we want...
 
-Both of these concepts are important in OO design.
+Have a look at StringTest.cpp and try running test. Can you
+see what the problem is?
 
-In this section we will look at how these are implemented
-in C++.
 
-Start by looking at the example code in inheritance.cpp
+Equality
+--------
 
-Next move onto to polymorphism.cpp
+CoordinateTest.cpp has a simple test for equality. Unfortunately
+it would not compile if we uncomment out the assertion. Equality
+between two classes (a == b) does not come for free.
 
-Exercise: write classes in Animal.hpp / Animal.cpp to make
-          test in animal_test.cpp pass
+We will look at overloading operators for a class.

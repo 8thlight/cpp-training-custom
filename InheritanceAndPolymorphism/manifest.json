@@ -1,12 +1,12 @@
 {
-  "display_name": "7, Vectors and maps",
+  "display_name": "6, Inheritance and polymorphism",
   "visible_filenames": [
     "instructions",
-    "basic_vectors.cpp",
-    "basic_maps.cpp",
-    "roman_numerals_test.cpp",
-    "roman_numerals_converter.cpp",
-    "roman_numerals_converter.hpp",
+    "inheritance.cpp",
+    "polymorphism.cpp",
+    "animals_test.cpp",
+    "Animal.hpp",
+    "Animal.cpp",
     "cyber-dojo.sh"
   ],
   "highlight_filenames": ["instructions"],

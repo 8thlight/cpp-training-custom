@@ -1,0 +1,18 @@
+Inheritance / Polymorphism
+--------------------------
+
+Inheritance - sharing Code through parent/child relationships
+Polymorphism - allows routines to use variables of different
+               through a common interface
+
+Both of these concepts are important in OO design.
+
+In this section we will look at how these are implemented
+in C++.
+
+Start by looking at the example code in inheritance.cpp
+
+Next move onto to polymorphism.cpp
+
+Exercise: write classes in Animal.hpp / Animal.cpp to make
+          test in animal_test.cpp pass

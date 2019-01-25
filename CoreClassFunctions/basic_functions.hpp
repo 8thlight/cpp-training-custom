@@ -4,7 +4,7 @@ struct A
 
   A(const A& other);       // copy constructor
 
-  A& operator=(A other);  // copy assignment constructor
+  A& operator=(A other);   // copy assignment constructor
 
   ~A();                    // destructor
 
