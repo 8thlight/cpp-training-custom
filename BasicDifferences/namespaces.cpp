@@ -59,7 +59,7 @@ namespace training
 
   void namespaces()
   {
-    std::cout << "Namespaces" << std::endl;
+    std::cout << "**Namespaces**" << std::endl;
     namespaceBasics();
     namespaceUsage();
   }

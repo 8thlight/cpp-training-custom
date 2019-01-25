@@ -70,6 +70,7 @@ namespace training
 
   void functions()
   {
+    cout << "**Functions**" << endl;
     functionOverloading();
     defaultParameters();
   }

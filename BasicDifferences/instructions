@@ -37,6 +37,14 @@ Open functions.cpp to find out about function overloading
 and default parameters.
 
 
+New and delete (new_delete.cpp)
+-------------------------------
+
+'new' and 'delete' are a pair of C++ language features that
+perform dynamic memory allocation. Basic usage is demonstrated
+in new_delete.cpp.
+
+
 Exceptions (exceptions.cpp)
 ---------------------------
 
