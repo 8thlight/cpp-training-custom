@@ -1,8 +1,8 @@
 {
-  "display_name": "5, Core class functions",
+  "display_name": "5, Special member functions",
   "visible_filenames": [
     "instructions",
-    "basic_functions.hpp",
+    "special_member_functions.hpp",
     "StringTest.cpp",
     "String.hpp",
     "String.cpp",
