@@ -1,11 +1,13 @@
 #include <gtest/gtest.h>
 #include "Animal.hpp"
 
-std::string soundMadeBy(Animal& animal) {
+std::string soundMadeBy(Animal& animal)
+{
   return animal.sound();
 }
 
-TEST(Animals, MakeAppropriateSounds) {
+TEST(Animals, MakeAppropriateSounds)
+{
   Dog dog("fido");
   Cat cat("felix");
   Cow cow("daisy");

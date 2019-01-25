@@ -1,9 +1,10 @@
-struct A {
+struct A
+{
   A();                     // default constructor
 
   A(const A& other);       // copy constructor
 
-  A& operator=(A& other);  // copy assignment constructor
+  A& operator=(A other);  // copy assignment constructor
 
   ~A();                    // destructor
 

@@ -2,13 +2,16 @@
 
 using namespace std;
 
-namespace training {
+namespace training
+{
 
-  void foo(int n) {
+  void foo(int n)
+  {
     cout << "I'm a number " << n << endl;
   }
 
-  void foo(int n, string s) {
+  void foo(int n, string s)
+  {
     cout << "I'm a number with a string "
          << n
          << " "
@@ -16,25 +19,30 @@ namespace training {
          << endl;
   }
 
-  struct Customer {
+  struct Customer
+  {
     int id;
   };
 
-  void foo(const Customer& c) {
+  void foo(const Customer& c)
+  {
     cout << "I'm a const ref customer " << c.id << endl;
   }
 
-  void foo(Customer& c) {
+  void foo(Customer& c)
+  {
     cout << "I'm a non-const ref customer " << c.id << endl;
   }
 
   // functions that differ only in return type are ambiguous
   // this will not compile:
-  //int foo(Customer& c) {
+  //int foo(Customer& c)
+  //{
   //  return 0;
   //}
 
-  void functionOverloading() {
+  void functionOverloading()
+  {
     foo(1);
     foo(2, "hello");
 
@@ -44,17 +52,24 @@ namespace training {
   }
 
 
+  /////////////////////////////////////
 
-  void bar(int i, string s = "default") {
+
+  void bar(int i, string s = "default")
+  {
     cout << i << ", " << s << endl;
   }
 
-  void defaultParameters() {
+  void defaultParameters()
+  {
     bar(3);
     bar(3, "hello");
   }
 
-  void functions() {
+  /////////////////////////////////////
+
+  void functions()
+  {
     functionOverloading();
     defaultParameters();
   }

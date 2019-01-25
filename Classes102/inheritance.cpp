@@ -3,23 +3,27 @@
 
 using namespace std;
 
-namespace training {
+namespace training
+{
 
-  class Human {
+  class Human
+  {
     public:
-      int age;
+      int m_Age;
     protected:          // not accessible when using class
-      string name;
+      string m_Name;
     private:
-      string id;
+      string m_Id;
   };
 
-  class Phil : public Human {
+  class Phil : public Human
+  {
     public:
-      void foo() {
-        cout << age;
-        cout << name;
-        // cout << id;  // not accessible
+      void foo()
+      {
+        cout << m_Age;
+        cout << m_Name;
+        // cout << m_Id;  // not accessible
       }
   };
 

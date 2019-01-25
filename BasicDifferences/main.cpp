@@ -5,7 +5,8 @@
 
 using namespace training;
 
-int main() {
+int main()
+{
   namespaces();
   //references();
   //functions();

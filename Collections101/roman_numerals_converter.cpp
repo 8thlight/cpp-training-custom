@@ -1,3 +1,4 @@
-namespace training {
+namespace training
+{
 
 }

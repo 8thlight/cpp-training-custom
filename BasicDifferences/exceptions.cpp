@@ -1,19 +1,25 @@
 #include <iostream>
 #include <exception>
 
-namespace training {
+namespace training
+{
 
-  void functionThatMightThrow(int i) {
-    if (i == 1) {
+  void functionThatMightThrow(int i)
+  {
+    if (i == 1)
+    {
       throw std::exception();
     }
   }
 
-  void exceptions() {
-    try {
+  void exceptions()
+  {
+    try
+    {
       functionThatMightThrow(1);
     }
-    catch(std::exception& e) {
+    catch(std::exception& e)
+    {
       std::cout << e.what() << std::endl;
     }
     std::cout << "moving on..." << std::endl;

@@ -2,9 +2,11 @@
 
 using namespace std;
 
-namespace training {
+namespace training
+{
 
-  class NumberHolder {
+  class NumberHolder
+  {
     public:
       // constructor
       NumberHolder(int number);
@@ -12,18 +14,21 @@ namespace training {
       int getNumber();
 
     private:
-      int _number;
+      int m_Number;
   };
 
-  NumberHolder::NumberHolder(int number) {
-    _number = number;
+  NumberHolder::NumberHolder(int number)
+  {
+    m_Number = number;
   }
 
-  int NumberHolder::getNumber() {
-    return _number;
+  int NumberHolder::getNumber()
+  {
+    return m_Number;
   }
 
-  void basicClassUsage() {
+  void basicClassUsage()
+  {
     NumberHolder stackAllocated(4);
     cout << stackAllocated.getNumber() << endl;
 

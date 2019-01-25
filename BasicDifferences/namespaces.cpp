@@ -1,9 +1,11 @@
 #include <iostream>
 
 // namespaces are declared as a block
-namespace training {
+namespace training
+{
 
-  void namespaceBasics() {
+  void namespaceBasics()
+  {
     // symbols declared in namespace must be prefixed by namespace
     std::cout << "cout is in std namespace, as is endl" << std::endl;
     // cout << "I won't compile";
@@ -20,20 +22,29 @@ namespace training {
      */
   }
 
+
+  //////////////////////////////////////////////////////
+
+
   // namespaces can be nested training::customer::ship
-  namespace customer {
-    void ship(int orderId) {
+  namespace customer
+  {
+    void ship(int orderId)
+    {
       std::cout << "Shipping order " << orderId << std::endl;
     }
   }
 
-  namespace release {
-    void ship(int releaseNumber) {
+  namespace release
+  {
+    void ship(int releaseNumber)
+    {
       std::cout << "Shipping release " << releaseNumber << std::endl;
     }
   }
 
-  void namespaceUsage() {
+  void namespaceUsage()
+  {
     // namespaces allow us to use names already used by imported
     // libraries or elsewhere in our codebase
 
@@ -46,7 +57,8 @@ namespace training {
     release::ship(releaseNumber);
   }
 
-  void namespaces() {
+  void namespaces()
+  {
     std::cout << "Namespaces" << std::endl;
     namespaceBasics();
     namespaceUsage();

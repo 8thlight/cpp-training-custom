@@ -3,7 +3,8 @@
 
 using namespace training;
 
-TEST(RomanNumerals, ConvertsArabicNumberOneToNumeral) {
+TEST(RomanNumerals, ConvertsArabicNumberOneToNumeral)
+{
   RomanNumeralsConverter converter;
 
   EXPECT_EQ(converter.convert(1), "I");

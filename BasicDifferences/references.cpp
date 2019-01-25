@@ -3,9 +3,11 @@
 
 using namespace std;
 
-namespace training {
+namespace training
+{
 
-  void referenceBasics() {
+  void referenceBasics()
+  {
     int number = 5;
 
     // references are declared using &
@@ -19,15 +21,21 @@ namespace training {
     referenceToNumber = 8;
     cout << number << endl; // 8
 
-    // references cannot be null and cannot be re-assigned
+    // references must be assigned immediately and cannot be re-assigned
     // int& nullReference;  // will not compile
   }
 
-  struct Customer {
+
+  ////////////////////////////////////////////////
+
+
+  struct Customer
+  {
     int id;
   };
 
-  void referenceAccess() {
+  void referenceAccess()
+  {
     Customer customer;
     customer.id = 1;
 
@@ -45,19 +53,26 @@ namespace training {
     cout << &ref << endl;
   }
 
-  void modifyingParam(int& number) {
+
+  ////////////////////////////////////////////////
+
+
+  void modifyingParam(int& number)
+  {
     number = 3;
   }
 
-  void printId(const Customer& readOnlyParameter) {
-    // access is 'safe' as reference cannot be null
+  void printId(const Customer& readOnlyParameter)
+  {
+    // access is 'safe' as reference had to be assigned when created
     cout << readOnlyParameter.id << endl;
 
     // const ref prevents modification
     // readOnlyParameter.id = 2;  // will not compile
   }
 
-  void references() {
+  void references()
+  {
     cout << "References" << endl;
     referenceBasics();
     referenceAccess();

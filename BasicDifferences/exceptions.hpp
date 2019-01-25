@@ -1,6 +1,9 @@
 #ifndef __TRAINING_EXCEPTIONS_HPP__
 #define __TRAINING_EXCEPTIONS_HPP__
-namespace training {
+
+namespace training
+{
   void exceptions();
 }
+
 #endif

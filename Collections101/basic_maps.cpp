@@ -6,7 +6,8 @@
 
 using namespace std;
 
-TEST(MapTest, ConstructorInitialisation) {
+TEST(MapTest, ConstructorInitialisation)
+{
   map<int, string> aMap;
   aMap.emplace(1, "one");
   aMap.emplace(2, "two");
@@ -15,7 +16,8 @@ TEST(MapTest, ConstructorInitialisation) {
   ASSERT_EQ(3, aMap.size());
 }
 
-TEST(MapTest, GetKeysValuesFromMap) {
+TEST(MapTest, GetKeysValuesFromMap)
+{
   map<int, string> aMap;
   aMap.emplace(1, "one");
   aMap.emplace(2, "two");
@@ -26,7 +28,8 @@ TEST(MapTest, GetKeysValuesFromMap) {
   ASSERT_EQ("one", mapIterator->second);
 }
 
-TEST(MapTest, KeyDoesNotExistInMap) {
+TEST(MapTest, KeyDoesNotExistInMap)
+{
   map<string, string> aMap;
   aMap.emplace("key", "value");
 
@@ -34,7 +37,8 @@ TEST(MapTest, KeyDoesNotExistInMap) {
   ASSERT_TRUE(mapIterator == aMap.end());
 }
 
-TEST(MapTest, IteratingOverMap) {
+TEST(MapTest, IteratingOverMap)
+{
   int keySum;
   int valueSum;
 
@@ -48,7 +52,8 @@ TEST(MapTest, IteratingOverMap) {
 
   keySum = 0;
   valueSum = 0;
-  for (auto it = aMap.begin(); it != aMap.end(); ++it) {
+  for (auto it = aMap.begin(); it != aMap.end(); ++it)
+  {
     keySum += it->first;
     valueSum += it->second;
   }
@@ -58,7 +63,8 @@ TEST(MapTest, IteratingOverMap) {
 
   keySum = 0;
   valueSum = 0;
-  for (auto it : aMap) {
+  for (auto it : aMap)
+  {
     keySum += it.first;
     valueSum += it.second;
   }

@@ -1,7 +1,8 @@
 #ifndef __TRAINING_FUNCTIONS_HPP__
 #define __TRAINING_FUNCTIONS_HPP__
 
-namespace training {
+namespace training
+{
   void functions();
 }
 

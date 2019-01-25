@@ -6,7 +6,8 @@
 
 using namespace std;
 
-TEST(VectorTest, ConstructorInitialisation) {
+TEST(VectorTest, ConstructorInitialisation)
+{
   vector<string> aVector = vector<string>{"hello", "world"};
 
   ASSERT_EQ(aVector.size(), 2);
@@ -18,7 +19,8 @@ TEST(VectorTest, ConstructorInitialisation) {
   ASSERT_EQ(aVector, anotherVector);
 }
 
-TEST(VectorTest, StartWithEmptyVector) {
+TEST(VectorTest, StartWithEmptyVector)
+{
   vector<string> aVector;
   aVector.emplace_back("hello");
   aVector.emplace_back("world");
@@ -32,7 +34,8 @@ TEST(VectorTest, StartWithEmptyVector) {
   ASSERT_EQ(aVector, anotherVector);
 }
 
-TEST(VectorTest, GettingItemsFromVector) {
+TEST(VectorTest, GettingItemsFromVector)
+{
   vector<string> aVector;
   aVector.emplace_back("hello");
   aVector.emplace_back("world");
@@ -48,7 +51,8 @@ TEST(VectorTest, GettingItemsFromVector) {
   ASSERT_EQ(aVector.at(0), aVector[0]);
 }
 
-TEST(VectorTest, RemovingItemsFromVector) {
+TEST(VectorTest, RemovingItemsFromVector)
+{
   vector<string> aVector{"hello", "world"};
 
   aVector.pop_back();
@@ -61,12 +65,14 @@ TEST(VectorTest, RemovingItemsFromVector) {
   ASSERT_EQ(aVector[1], "world");
 }
 
-TEST(VectorTest, IteratingOverVector) {
+TEST(VectorTest, IteratingOverVector)
+{
   int sum;
   vector<int> aVector{100, 200, 300};
 
   sum = 0;
-  for (int i = 0; i < aVector.size(); i++) {
+  for (int i = 0; i < aVector.size(); i++)
+  {
     sum += aVector.at(i);
   }
 
@@ -74,7 +80,8 @@ TEST(VectorTest, IteratingOverVector) {
 
   // Using the vector's iterator:
   sum = 0;
-  for (auto it = aVector.begin(); it != aVector.end(); ++it) {
+  for (auto it = aVector.begin(); it != aVector.end(); ++it)
+  {
     sum += *it;
   }
 
@@ -82,7 +89,8 @@ TEST(VectorTest, IteratingOverVector) {
 
   // Using a for each loop:
   sum = 0;
-  for (int value : aVector) {
+  for (int value : aVector)
+  {
     sum += value;
   }
 
@@ -90,7 +98,8 @@ TEST(VectorTest, IteratingOverVector) {
 
   // We can also pop the vector's elements and loop until the vector is empty:
   sum = 0;
-  while (!aVector.empty()) {
+  while (!aVector.empty())
+  {
     sum += aVector.back();
     aVector.pop_back();
   }
@@ -98,7 +107,8 @@ TEST(VectorTest, IteratingOverVector) {
   ASSERT_EQ(sum, 600);
 }
 
-TEST(VectorTest, SortingVectorsBasic) {
+TEST(VectorTest, SortingVectorsBasic)
+{
   vector<int> numbers{10, 30, 20, 50, 40, 90, 70, 60, 80};
 
   sort(numbers.begin(), numbers.end());
@@ -107,7 +117,8 @@ TEST(VectorTest, SortingVectorsBasic) {
   ASSERT_EQ(sorted, numbers);
 }
 
-class Person {
+class Person
+{
  private:
   int age;
   string name;
@@ -118,30 +129,37 @@ class Person {
   bool operator==(const Person &other) const;
 };
 
-Person::Person(string name, int age) {
+Person::Person(string name, int age)
+{
   this->age = age;
   this->name = name;
 }
 
-int Person::getAge() const {
+int Person::getAge() const
+{
   return age;
 }
 
-string Person::getName() const {
+string Person::getName() const
+{
   return name;
 }
 
-bool Person::operator==(const Person &other) const {
+bool Person::operator==(const Person &other) const
+{
   return age == other.getAge() && name == other.getName();
 }
 
-struct ageSort {
-  bool operator()(const Person &person, const Person &other) {
+struct ageSort
+{
+  bool operator()(const Person &person, const Person &other)
+  {
     return person.getAge() < other.getAge();
   }
 };
 
-TEST(VectorTest, SortingVectorsCustomClass) {
+TEST(VectorTest, SortingVectorsCustomClass)
+{
   Person person1("Xavier", 23);
   Person person2("Amanda", 87);
   Person person3("Stephanie", 19);

@@ -3,15 +3,18 @@
 
 using namespace std;
 
-namespace training {
+namespace training
+{
 
-  class Shape {
+  class Shape
+  {
     public:
       Shape(int width, int height)
         : _width(width), _height(height)
       {}
 
-      int area() {
+      int area()
+      {
         cout << "Shape area" << endl;
         return 0;
       }
@@ -21,31 +24,36 @@ namespace training {
       int _height;
   };
 
-  class Rectangle : public Shape {
+  class Rectangle : public Shape
+  {
     public:
       Rectangle(int width, int height)
         : Shape(width, height)
       {}
 
-      int area() {
+      int area()
+      {
         cout << "Rectangle area" << endl;
         return _width * _height;
       }
   };
 
-  class Triangle : public Shape {
+  class Triangle : public Shape
+  {
     public:
       Triangle(int width, int height)
         : Shape(width, height)
       {}
 
-      int area() {
+      int area()
+      {
         cout << "Triangle area" << endl;
         return (_width * _height / 2);
       }
   };
 
-  void polymorphism() {
+  void polymorphism()
+  {
     Rectangle rectangle(4, 5);
     Triangle triangle(2, 3);
 
