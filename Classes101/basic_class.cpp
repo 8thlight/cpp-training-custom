@@ -67,15 +67,14 @@ namespace training
     // holder.setNumber(1);  // will not compile
   }
 
+}
 
-  //////////////////////////////////////////
 
+int main()
+{
+  cout << "**Basic class usage**" << endl;
+  training::instantiatingAndUsingAClass();
+  training::constMethods();
 
-  void basicClassUsage()
-  {
-    cout << "**Basic class usage**" << endl;
-    instantiatingAndUsingAClass();
-    constMethods();
-  }
-
+  return 0;
 }

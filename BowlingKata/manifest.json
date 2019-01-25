@@ -1,8 +1,10 @@
 {
-  "display_name": "3, Classes 101",
+  "display_name": "4, Bowling Kata",
   "visible_filenames": [
     "instructions",
-    "basic_class.cpp",
+    "GameTest.cpp",
+    "ExampleClass.hpp",
+    "ExampleClass.cpp",
     "cyber-dojo.sh"
   ],
   "highlight_filenames": ["instructions"],

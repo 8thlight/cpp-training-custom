@@ -1,20 +1,4 @@
 In this exercise we will look at the basic syntax
 of classes in C++
 
-Start by looking at basic_class.cpp to get an idea
-of basic syntax.
-
-Exercise time. Bowling.cpp contains an initial test
-for a class that scores a game of bowling. It should
-have two methods:
-
-- 'roll' for number of pins knocked down in single roll
-- 'score' to give final score once all rolls are made
-
-Tasks
-
- 1) Define the Game class in Game.hpp/Game.cpp so first test passes
- 2) Implement a second test for a round where all rolls are 1
-
-If you finish those have a think about other scores (spares/strikes)
-and try implementing tests/code to handle.
+Example code can be found in basic_class.cpp
