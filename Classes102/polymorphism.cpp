@@ -10,7 +10,7 @@ namespace training
   {
     public:
       Shape(int width, int height)
-        : _width(width), _height(height)
+        : m_Width(width), m_Height(height)
       {}
 
       int area()
@@ -20,8 +20,8 @@ namespace training
       }
 
     protected:
-      int _width;
-      int _height;
+      int m_Width;
+      int m_Height;
   };
 
   class Rectangle : public Shape
@@ -34,7 +34,7 @@ namespace training
       int area()
       {
         cout << "Rectangle area" << endl;
-        return _width * _height;
+        return m_Width * m_Height;
       }
   };
 
@@ -48,7 +48,7 @@ namespace training
       int area()
       {
         cout << "Triangle area" << endl;
-        return (_width * _height / 2);
+        return (m_Width * m_Height / 2);
       }
   };
 
