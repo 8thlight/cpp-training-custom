@@ -9,6 +9,10 @@ namespace training
   class Human
   {
     public:
+      Human(int age, const string& name, const string& id)
+        : m_Age(age), m_Name(name), m_Id(id)
+      {}
+
       int m_Age;
     protected:          // not accessible when using class
       string m_Name;
@@ -19,12 +23,23 @@ namespace training
   class Phil : public Human
   {
     public:
+      Phil()
+        : Human(30, "Phil", "001-AAA")
+      {}
+
       void foo()
       {
-        cout << m_Age;
-        cout << m_Name;
+        cout << m_Age << " " << m_Name << endl;
         // cout << m_Id;  // not accessible
       }
   };
+
+
+  void inheritance()
+  {
+    cout << "**Inheritance**" << endl;
+    Phil phil;
+    phil.foo();
+  }
 
 }

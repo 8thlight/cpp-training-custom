@@ -1,7 +1,7 @@
 Inheritance / Polymorphism
 --------------------------
 
-Inheritance - sharing Code through parent/child relationships
+Inheritance - parent/child relationships
 Polymorphism - allows routines to use variables of different
                through a common interface
 
@@ -14,5 +14,4 @@ Start by looking at the example code in inheritance.cpp
 
 Next move onto to polymorphism.cpp
 
-Exercise: write classes in Animal.hpp / Animal.cpp to make
-          test in animal_test.cpp pass
+Finally pure_virtual.cpp gives examples of interfaces and abstract classes

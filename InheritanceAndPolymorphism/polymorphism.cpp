@@ -1,4 +1,3 @@
-#include <string>
 #include <iostream>
 
 using namespace std;
@@ -9,29 +8,30 @@ namespace training
   class Shape
   {
     public:
-      Shape(int width, int height)
+      Shape(double width, double height)
         : m_Width(width), m_Height(height)
       {}
 
-      int area()
+      // virtual
+      double area()
       {
         cout << "Shape area" << endl;
         return 0;
       }
 
     protected:
-      int m_Width;
-      int m_Height;
+      double m_Width;
+      double m_Height;
   };
 
   class Rectangle : public Shape
   {
     public:
-      Rectangle(int width, int height)
+      Rectangle(double width, double height)
         : Shape(width, height)
       {}
 
-      int area()
+      double area() // override
       {
         cout << "Rectangle area" << endl;
         return m_Width * m_Height;
@@ -41,11 +41,11 @@ namespace training
   class Triangle : public Shape
   {
     public:
-      Triangle(int width, int height)
+      Triangle(double width, double height)
         : Shape(width, height)
       {}
 
-      int area()
+      double area()
       {
         cout << "Triangle area" << endl;
         return (m_Width * m_Height / 2);
@@ -54,6 +54,7 @@ namespace training
 
   void polymorphism()
   {
+    cout << "**Polymorphism**" << endl;
     Rectangle rectangle(4, 5);
     Triangle triangle(2, 3);
 

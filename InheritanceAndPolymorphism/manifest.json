@@ -4,9 +4,8 @@
     "instructions",
     "inheritance.cpp",
     "polymorphism.cpp",
-    "animals_test.cpp",
-    "Animal.hpp",
-    "Animal.cpp",
+    "pure_virtual.cpp",
+    "main.cpp",
     "cyber-dojo.sh"
   ],
   "highlight_filenames": ["instructions"],
