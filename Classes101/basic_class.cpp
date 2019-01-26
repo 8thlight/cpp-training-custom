@@ -18,13 +18,18 @@ namespace training
 
       void setNumber(int number);
 
+      static void outputNumber(int number);
+
     private:
       int m_Number;
   };
 
   NumberHolder::NumberHolder()
+    : m_Number(0)                    // initialiser list
   {
-    m_Number = 0;
+    // generally prefer initialiser list
+    // we will discuss why a bit later in the course
+    // m_Number = 0;
   }
 
   NumberHolder::NumberHolder(int number)
@@ -39,6 +44,14 @@ namespace training
 
   void NumberHolder::setNumber(int number) {
     m_Number = number;
+  }
+
+  void NumberHolder::outputNumber(int number) {
+    // static methods are not associated with a specific
+    // instance of the class - they cannot access non-static
+    // member variables
+    cout << number << endl;
+    // cout << m_Number << endl;    // will not compile!
   }
 
 
@@ -67,6 +80,11 @@ namespace training
     // holder.setNumber(1);  // will not compile
   }
 
+  void staticMethods() {
+    // static methods don't need an instance of class
+    NumberHolder::outputNumber(77);
+  }
+
 }
 
 
@@ -75,6 +93,7 @@ int main()
   cout << "**Basic class usage**" << endl;
   training::instantiatingAndUsingAClass();
   training::constMethods();
+  training::staticMethods();
 
   return 0;
 }
