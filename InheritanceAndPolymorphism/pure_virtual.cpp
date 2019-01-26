@@ -1,5 +1,4 @@
 #include <iostream>
-#include <sstream>
 
 using namespace std;
 
@@ -53,9 +52,7 @@ namespace training
     public:
       string get() const
       {
-        stringstream ss;
-        ss << "Welcome " << specificGreeting() << ". How may I be of service?";
-        return ss.str();
+        return  "Welcome " + specificGreeting() + ". How may I be of service?";
       }
 
     protected:
