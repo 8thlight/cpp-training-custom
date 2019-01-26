@@ -59,14 +59,16 @@ namespace training
       }
 
     protected:
+      ~Greeting() {}
+
+    private:
       virtual string specificGreeting() const = 0;
 
-      ~Greeting() {}
   };
 
   class PoliteGreeting : public Greeting
   {
-    protected:
+    private:
       string specificGreeting() const
       {
         return "honored guest";
@@ -75,7 +77,7 @@ namespace training
 
   class RudeGreeting : public Greeting
   {
-    protected:
+    private:
       string specificGreeting() const
       {
         return "lowlife";

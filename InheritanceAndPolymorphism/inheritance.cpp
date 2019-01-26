@@ -14,7 +14,7 @@ namespace training
       {}
 
       int m_Age;
-    protected:          // not accessible when using class
+    protected:
       string m_Name;
     private:
       string m_Id;
@@ -40,6 +40,8 @@ namespace training
     cout << "**Inheritance**" << endl;
     Phil phil;
     phil.foo();
+
+    // phil.m_Name;   // not accessible
   }
 
 }
