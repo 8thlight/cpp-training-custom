@@ -8,7 +8,7 @@ using namespace std;
 
 TEST(VectorTest, ConstructorInitialisation)
 {
-  vector<string> aVector = vector<string>{"hello", "world"};
+  vector<string> aVector = {"hello", "world"};
 
   ASSERT_EQ(aVector.size(), 2);
   ASSERT_EQ(aVector[0], "hello");
