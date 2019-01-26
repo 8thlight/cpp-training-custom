@@ -12,6 +12,9 @@ in C++.
 
 Start by looking at the example code in inheritance.cpp
 
-Next move onto to polymorphism.cpp
+Next move onto to polymorphism.cpp. Note that in starting state
+there is a deliberate bug in the code! If you look at the output
+from this you will see something looks a little weird. Can you
+guess what is going on?
 
 Finally pure_virtual.cpp gives examples of interfaces and abstract classes
