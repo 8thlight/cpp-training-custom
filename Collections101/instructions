@@ -16,7 +16,7 @@ For example:
 
 For a full description of how Roman Numerals work, take a look at http://www.novaroma.org/via_romana/numbers.html
 
-roman_numerals_test.cpp contains an initial test
+RomanNumeralsTest.cpp contains an initial test
 for a class that converts Arabic numbers to Roman Numerals. It should
 have one public method:
 
