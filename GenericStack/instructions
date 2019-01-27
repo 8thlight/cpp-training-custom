@@ -1,0 +1,15 @@
+Exercise time.
+
+We are going to revisit our Stack class.
+
+Stack.hpp and Stack.cpp have a completed version of
+the previous exercise. StackTest is the same as before
+except a <std::string> template parameter has been added.
+
+Your task is to convert Stack into a generic class that
+can be used for any type.
+
+! Note: you may well hit a problem with linking. Let instructor
+!       know if you do. We will discuss this more after
+
+Tip: you can see the previous template examples at link in slide

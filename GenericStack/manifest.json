@@ -1,10 +1,10 @@
 {
-  "display_name": "10, Templates",
+  "display_name": "11, Generic Stack",
   "visible_filenames": [
     "instructions",
-    "function_template.cpp",
-    "class_template.cpp",
-    "main.cpp",
+    "Stack.cpp",
+    "Stack.hpp",
+    "StackTest.cpp",
     "cyber-dojo.sh"
   ],
   "highlight_filenames": ["instructions"],
