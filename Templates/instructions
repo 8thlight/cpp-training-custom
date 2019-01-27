@@ -1,0 +1,22 @@
+Templates
+---------
+
+These examples are focussed on the syntax for
+defining and using templates.
+
+Function templates
+------------------
+
+function_template.cpp contains a definition of
+a generic max function
+
+
+Class templates
+---------------
+
+class_template.cpp contains a definition of a
+generic Pair class
+
+N.b. the standard library provides a std::pair
+     class so normally wouldn't have to roll our
+     own

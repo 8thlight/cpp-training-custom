@@ -1,0 +1,15 @@
+{
+  "display_name": "9, Templates",
+  "visible_filenames": [
+    "instructions",
+    "function_template.cpp",
+    "class_template.cpp",
+    "main.cpp",
+    "cyber-dojo.sh"
+  ],
+  "highlight_filenames": ["instructions"],
+  "runner_choice":"stateless",
+  "image_name": "cyberdojofoundation/gpp_googletest",
+  "filename_extension": ".cpp",
+  "tab_size": 4
+}
