@@ -6,7 +6,10 @@
     "polymorphism.cpp",
     "pure_virtual.cpp",
     "main.cpp",
-    "cyber-dojo.sh"
+    "cyber-dojo.sh",
+    "inheritance.hpp",
+    "polymorphism.hpp",
+    "pure_virtual.hpp"
   ],
   "highlight_filenames": ["instructions"],
   "runner_choice":"stateless",

@@ -8,6 +8,7 @@
     "references.hpp",
     "functions.cpp",
     "functions.hpp",
+    "new_delete.cpp",
     "exceptions.cpp",
     "exceptions.hpp",
     "main.cpp",

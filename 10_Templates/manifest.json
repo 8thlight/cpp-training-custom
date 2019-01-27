@@ -6,7 +6,10 @@
     "class_template.cpp",
     "non_type_template.cpp",
     "main.cpp",
-    "cyber-dojo.sh"
+    "cyber-dojo.sh",
+    "function_template.hpp",
+    "class_template.hpp",
+    "non_type_template.hpp"
   ],
   "highlight_filenames": ["instructions"],
   "runner_choice":"stateless",

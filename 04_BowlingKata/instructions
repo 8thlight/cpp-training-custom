@@ -10,6 +10,7 @@ Tasks
 -----
 
  1) Define the Game class in Game.hpp/Game.cpp so first test passes
+    NOTE: you will need to add Game.cpp to compilation in cyber-dojo.sh
  2) Implement a second test for a round where all rolls are 1
 
 If you finish those have a think about other scores (spares/strikes)

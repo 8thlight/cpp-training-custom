@@ -1,4 +1,4 @@
-#include "Stack_Complete.hpp"
+#include "Stack.hpp"
 
 namespace training
 {
