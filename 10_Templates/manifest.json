@@ -4,6 +4,7 @@
     "instructions",
     "function_template.cpp",
     "class_template.cpp",
+    "non_type_template.cpp",
     "main.cpp",
     "cyber-dojo.sh"
   ],

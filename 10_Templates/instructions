@@ -20,3 +20,13 @@ generic Pair class
 N.b. the standard library provides a std::pair
      class so normally wouldn't have to roll our
      own
+
+
+Non-type templates
+------------------
+
+non_type_template.cpp contains an example of template
+parameter that is not a type
+
+N.b. the standard library also includes a std::array
+     class
