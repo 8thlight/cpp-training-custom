@@ -4,6 +4,7 @@ using namespace std;
 
 namespace training
 {
+  // template <class T> is also valid
   template <typename T>
   T max(T a, T b)
   {
