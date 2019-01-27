@@ -1,5 +1,4 @@
-
-g++ -std=c++17 -c basic_vectors.cpp basic_maps.cpp RomanNumeralsConverterTest.cpp RomanNumeralsConverter.cpp
+g++ -std=c++17 -c basic_vectors.cpp basic_maps.cpp
 if [ $? != 0 ]; then
   echo
   echo ">>> [compilation failed]"
@@ -8,6 +7,6 @@ if [ $? != 0 ]; then
 fi
 
 mkdir -p bin
-g++ -std=c++17 basic_vectors.cpp basic_maps.cpp RomanNumeralsConverterTest.cpp RomanNumeralsConverter.cpp -lgtest -lgtest_main -pthread -o bin/main
+g++ -std=c++17 basic_vectors.cpp basic_maps.cpp -lgtest -lgtest_main -pthread -o bin/main
 rm -f *.o
 bin/main

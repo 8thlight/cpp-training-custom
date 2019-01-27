@@ -1,0 +1,26 @@
+Exercise time.
+
+Your task will be to write a class to represent a stack
+of std::string objects by using std::vector to store
+elements.
+
+A stack is a last-in-first-out data structure that typically
+implements methods push and pop to add/remove elements.
+
+Task:
+Create files Stack.hpp & Stack.cpp and implement a Stack class
+that satisfies the test in StackTest.cpp. You will need to
+implement the following methods
+
+- a constructor with intializer_list (hint: have a look at
+  the constructors for std::vector)
+- 'size' returning number of elements in stack
+- 'empty' returning whether or not stack is empty
+- 'push' to add a string to stack
+- 'pop' to retrieve and remove string from stack
+- 'peek' to retrieve string from stack
+
+Tip: remember to add your Stack.cpp in cyber-dojo.sh
+
+Tip: remember the docs for std::vector can be found here:
+https://en.cppreference.com/w/cpp/container/vector

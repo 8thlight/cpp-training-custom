@@ -1,9 +1,8 @@
 {
-  "display_name": "8, Vectors and maps",
+  "display_name": "9, String Stack",
   "visible_filenames": [
     "instructions",
-    "basic_vectors.cpp",
-    "basic_maps.cpp",
+    "StackTest.cpp",
     "cyber-dojo.sh"
   ],
   "highlight_filenames": ["instructions"],
