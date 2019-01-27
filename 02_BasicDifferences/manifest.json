@@ -9,6 +9,7 @@
     "functions.cpp",
     "functions.hpp",
     "new_delete.cpp",
+    "new_delete.hpp",
     "exceptions.cpp",
     "exceptions.hpp",
     "main.cpp",
