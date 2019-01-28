@@ -37,7 +37,7 @@ namespace training
   void interface()
   {
     cout << "**Interface**" << endl;
-    // Shape shape;  // cannot instantiate an instance
+    // IShape shape;  // cannot instantiate an instance
     Square square(2);
     printAreaOf(square);
   }

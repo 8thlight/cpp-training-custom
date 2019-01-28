@@ -21,7 +21,7 @@ namespace training
     referenceToNumber = 8;
     cout << number << endl; // 8
 
-    // references must be assigned immediately and cannot be re-assigned
+    // references must be assigned immediately
     // int& nullReference;  // will not compile
   }
 
