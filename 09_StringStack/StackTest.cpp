@@ -1,4 +1,4 @@
-#include "Stack_Complete.hpp"
+#include "Stack.hpp"
 #include "gtest/gtest.h"
 
 using namespace training;

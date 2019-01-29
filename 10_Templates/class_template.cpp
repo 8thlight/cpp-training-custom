@@ -22,7 +22,7 @@ namespace training
   template <typename U, typename V>
   bool Pair<U,V>::operator<(const Pair<U,V>& other)
   {
-      return (first < other.first || other.second < other.second);
+      return (first < other.first || second < other.second);
   }
 
 
