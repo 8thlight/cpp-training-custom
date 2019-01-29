@@ -8,7 +8,7 @@
     "LotteryEmployee.hpp",
     "PayrollTest.cpp",
     "SalariedEmployee.cpp",
-    "SalariedEmplyee.hpp",
+    "SalariedEmployee.hpp",
     "TimeCard.hpp",
     "UnionEmployee.cpp",
     "UnionEmployee.hpp",
