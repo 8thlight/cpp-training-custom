@@ -1,0 +1,19 @@
+It's time to tackle a larger exercise, bringing together several aspects of
+what we have learned this week.
+
+The task will to implement part of a payroll system.
+
+The task is split into steps corresponding to tests defined in PayrollTest.cpp
+
+1) Define a SalariedEmployee class in SalariedEmployee.hpp
+   / SalariedEmployee.cpp
+
+   A salaried employee has an annual salary. The monthly pay of a salaried
+   employee is taxed so they only receive 2/3 of pre-tax pay
+
+
+
+
+
+Salaried employees - annual pay / 12 and after tax receive 2/3 this amount
+
