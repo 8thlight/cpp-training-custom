@@ -2,16 +2,9 @@
   "display_name": "12, Payroll",
   "visible_filenames": [
     "instructions",
-    "DayRateEmployee.cpp",
-    "DayRateEmployee.hpp",
-    "Employee.hpp",
     "LotteryEmployee.hpp",
     "PayrollTest.cpp",
-    "SalariedEmployee.cpp",
-    "SalariedEmployee.hpp",
     "TimeCard.hpp",
-    "UnionEmployee.cpp",
-    "UnionEmployee.hpp",
     "cyber-dojo.sh"
   ],
   "highlight_filenames": ["instructions"],

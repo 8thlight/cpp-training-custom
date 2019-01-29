@@ -3,17 +3,54 @@ what we have learned this week.
 
 The task will to implement part of a payroll system.
 
-The task is split into steps corresponding to tests defined in PayrollTest.cpp
+The task is split into steps corresponding to tests defined in PayrollTest.cpp.
+I would recommend getting each test passing before uncommenting and moving onto
+the next one.
 
-1) Define a SalariedEmployee class in SalariedEmployee.hpp
+1) Define a SalariedEmployee class by creating files SalariedEmployee.hpp
    / SalariedEmployee.cpp
 
    A salaried employee has an annual salary. The monthly pay of a salaried
    employee is taxed so they only receive 2/3 of pre-tax pay
 
+   e.g. An annual salary of 36000 gives a monthly salary of 3000. After tax
+        this is 2000
 
+2) Define a DayRateEmployee class by creating files DayRateEmployee.hpp
+   / DayRateEmployee.cpp
 
+   A day rate employee has a daily rate and can add time cards (represented by
+   provided TimeCard class) that record a number of days. Pay is calculated as
+   a simple multiple of days and daily rate.
 
+3) Write proper implementation of the averagePayThisMonth function in
+   PayrollTest.cpp
 
-Salaried employees - annual pay / 12 and after tax receive 2/3 this amount
+   Note this will require modification of the classes you defined earlier.
+
+   HINT: remember you will need to add an include for shared_ptr
+
+4) Define a UnionEmployee class by creating files UnionEmployee.hpp
+   / SalariedEmployee.cpp
+
+   A union employee is a normal employee who can also make purchases at the
+   union shop. The total amount of purchases is deducted from their pay.
+
+   ! I would like this to be implemented using the decorator pattern !
+
+   HINT: we use a unique_ptr so that the union employee takes ownership of
+         the underlying employee. If you get stuck try googling for how to
+         transfer ownership
+
+5) The company is running an experimental trial of a weird and wacky payment
+   scheme.
+
+   File LotteryEmployee.hpp contains an implementation of this new scheme. A
+   LotteryEmployee receives a monthly payment calculated from their annual
+   salary. On top of this they receive a random amount between 1 and 20000
+   as a bonus!
+
+   Run the final test a few times and observe the outcome.
+
+   Your task is to ensure this test runs deterministically
 

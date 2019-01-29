@@ -1,7 +1,7 @@
 #ifndef __TRAINING_SALARIED_EMPLOYEE_HPP__
 #define __TRAINING_SALARIED_EMPLOYEE_HPP__
 
-#include "Employee.hpp"
+#include "Employee_Complete.hpp"
 
 namespace training
 {

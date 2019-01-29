@@ -1,4 +1,4 @@
-#include "SalariedEmployee.hpp"
+#include "SalariedEmployee_Complete.hpp"
 
 static int afterTax(int amount)
 {

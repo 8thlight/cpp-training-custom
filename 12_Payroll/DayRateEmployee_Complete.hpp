@@ -2,7 +2,7 @@
 #define __TRAINING_DAYRATEEMPLOYEE_HPP__
 
 #include <vector>
-#include "Employee.hpp"
+#include "Employee_Complete.hpp"
 #include "TimeCard.hpp"
 
 namespace training

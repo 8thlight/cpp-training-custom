@@ -2,7 +2,7 @@
 #define __TRAINING_UNIONEMPLOYEE_HPP__
 
 #include <memory>
-#include "Employee.hpp"
+#include "Employee_Complete.hpp"
 
 namespace training
 {
