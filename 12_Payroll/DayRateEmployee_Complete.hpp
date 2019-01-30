@@ -18,7 +18,7 @@ namespace training
 
     private:
       int m_DailyRate;
-      std::vector<TimeCard> m_TimeCards;
+      int m_Days;
   };
 }
 

@@ -8,16 +8,11 @@ namespace training
 
     void DayRateEmployee::addTimeCard(const TimeCard& timeCard)
     {
-      m_TimeCards.push_back(timeCard);
+      m_Days += timeCard.days;
     }
 
     int DayRateEmployee::payForThisMonth() const
     {
-      int pay = 0;
-      for (const TimeCard& timeCard : m_TimeCards)
-      {
-        pay += timeCard.days * m_DailyRate;
-      }
-      return pay;
+      return m_DailyRate*m_Days;
     }
 }
