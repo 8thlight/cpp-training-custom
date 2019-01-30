@@ -1,7 +1,6 @@
 #ifndef __TRAINING_DAYRATEEMPLOYEE_HPP__
 #define __TRAINING_DAYRATEEMPLOYEE_HPP__
 
-#include <vector>
 #include "Employee_Complete.hpp"
 #include "TimeCard.hpp"
 
