@@ -31,7 +31,7 @@ the next one.
    HINT: remember you will need to add an include for shared_ptr
 
 4) Define a UnionEmployee class by creating files UnionEmployee.hpp
-   / SalariedEmployee.cpp
+   / UnionEmployee.cpp
 
    A union employee is a normal employee who can also make purchases at the
    union shop. The total amount of purchases is deducted from their pay.
