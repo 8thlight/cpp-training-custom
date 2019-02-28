@@ -4,6 +4,8 @@
 #include <vector>
 #include <array>
 
+using namespace std;
+
 namespace training {
 	class Board {
 
@@ -14,7 +16,7 @@ namespace training {
 
 		bool isGameOver() const;
 
-		static Board withMarks(const std::vector<Mark> &marks);
+		static Board withMarks(const vector<Mark> &marks);
 
 		bool isWin() const;
 
@@ -28,30 +30,30 @@ namespace training {
 
 	private:
 		const int m_Dimension;
-		std::vector<Mark> m_Marks;
+		vector<Mark> m_Marks;
 
-		bool anyLineWin(std::vector<std::vector<int>> lines) const;
+		bool anyLineWin(vector<vector<int>> lines) const;
 
-		bool isLineWin(std::vector<int> positions) const;
+		bool isLineWin(vector<int> positions) const;
 
-		bool allMarksIdentical(std::vector<int> positions) const;
+		bool allMarksIdentical(vector<int> positions) const;
 
-		std::vector<std::vector<int>> getColumnIndices() const;
+		vector<vector<int>> getColumnIndices() const;
 
-		std::vector<int> getColStartingValues() const;
+		vector<int> getColStartingValues() const;
 
-		std::vector<int> makeCol(int startingValue) const;
+		vector<int> makeCol(int startingValue) const;
 
-		std::vector<std::vector<int>> getRowIndices() const;
+		vector<vector<int>> getRowIndices() const;
 
-		std::vector<int> getRowStartingValues() const;
+		vector<int> getRowStartingValues() const;
 
-		std::vector<int> makeRow(int startingValue) const;
+		vector<int> makeRow(int startingValue) const;
 
-		std::vector<std::vector<int>> getDiagIndices() const;
+		vector<vector<int>> getDiagIndices() const;
 
-		std::vector<int> makeLeftDiag() const;
+		vector<int> makeLeftDiag() const;
 
-		std::vector<int> makeRightDiag() const;
+		vector<int> makeRightDiag() const;
 	};
 }

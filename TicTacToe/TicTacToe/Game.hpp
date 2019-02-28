@@ -9,7 +9,7 @@ using namespace std;
 namespace training {
 	class Game {
 	public:
-		Game(Player &playerOne, Player &playerTwo, UI &ui, int m_Dimension);
+		Game(Player & m_PlayerOne, Player & m_PlayerTwo, UI & m_UI, int m_Dimension);
 
 		void play();
 
@@ -17,9 +17,9 @@ namespace training {
 
 	private:
 		Board m_Board;
-		Player &m_PlayerOne;
-		Player &m_PlayerTwo;
-		UI &ui;
+		Player & m_PlayerOne;
+		Player & m_PlayerTwo;
+		UI & m_UI;
 
 		void playAllTurns(Player &activePlayer);
 

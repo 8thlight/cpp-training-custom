@@ -1,21 +1,20 @@
 #include <gtest/gtest.h>
 #include "Game.hpp"
 #include "StubPlayer.hpp"
+#include "UIStub.hpp"
 
 using namespace std;
 
 namespace training {
 
 	TEST(Game, EndingInDraw) {
-		istringstream input("");
-		ostringstream output;
-		UI ui(input, output);
+		UIStub uistub;
 		StubPlayer playerOne = StubPlayer(X);
 		StubPlayer playerTwo = StubPlayer(O);
 		playerOne.willSelectSpaces({ 1, 2, 7, 6, 9 });
 		playerTwo.willSelectSpaces({ 5, 3, 4, 8 });
 
-		Game game(playerOne, playerTwo, ui, 3);
+		Game game(playerOne, playerTwo, uistub, 3);
 
 		game.play();
 
@@ -23,14 +22,12 @@ namespace training {
 	}
 
 	TEST(Game, P1WinRow) {
-		istringstream input("");
-		ostringstream output;
-		UI ui(input, output);
+		UIStub uistub;
 		StubPlayer playerOne = StubPlayer(X);
 		StubPlayer playerTwo = StubPlayer(O);
 		playerOne.willSelectSpaces({ 1, 2, 3 });
 		playerTwo.willSelectSpaces({ 4, 5 });
-		Game game(playerOne, playerTwo, ui, 3);
+		Game game(playerOne, playerTwo, uistub, 3);
 
 		game.play();
 

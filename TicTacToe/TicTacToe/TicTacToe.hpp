@@ -1,21 +1,25 @@
 #pragma once
+
 #include "UI.hpp"
+#include "CommandLineUI.hpp"
 #include "Player.hpp"
 #include "HumanPlayer.hpp"
 #include "Game.hpp"
 #include "RandomPlayer.hpp"
 
+using namespace std;
+
 namespace training {
 	class TicTacToe {
 	public:
-		explicit TicTacToe(UI &ui, int m_Dimension);
+		explicit TicTacToe(UI & m_UI, int m_Dimension);
 
 		void start();
 
 	private:
-		UI ui;
+		UI & m_UI;
 		int m_Dimension;
 
-		std::array<unique_ptr<Player>, 2> makePlayers(int mode);
+		array<unique_ptr<Player>, 2> makePlayers(int mode);
 	};
 }

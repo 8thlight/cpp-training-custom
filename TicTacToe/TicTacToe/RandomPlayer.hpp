@@ -1,5 +1,6 @@
 #pragma once
 
+#include <stdlib.h>
 #include "Player.hpp"
 #include "Board.hpp"
 
@@ -8,7 +9,7 @@ namespace training {
 	public:
 		explicit RandomPlayer(Mark m_Mark);
 
-		int getMove(const Board & m_Board) override;
+		int getMove(const Board & board) override;
 
 	private:
 		int generateRandInRange();

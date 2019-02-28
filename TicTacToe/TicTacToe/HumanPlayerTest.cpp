@@ -1,14 +1,13 @@
 #include <gtest/gtest.h>
 #include "HumanPlayer.hpp"
-
-using namespace std;
+#include "UIStub.hpp"
+#include "Board.hpp"
+#include "Mark.hpp"
 
 namespace training {
 	TEST(HumanPlayer, inputTileOccupiedValidation) {
-		istringstream input("1" + newline + "2" + newline);
-		ostringstream output;
-		UI ui(input, output);
-		HumanPlayer player = HumanPlayer(X, ui);
+		UIStub uistub({ "1", "2" });
+		HumanPlayer player = HumanPlayer(X, uistub);
 		Board board(3);
 		board.setMark(1, X);
 

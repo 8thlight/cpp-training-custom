@@ -1,13 +1,12 @@
-#include <stdlib.h>
 #include "RandomPlayer.hpp"
 
 namespace training {
 	RandomPlayer::RandomPlayer(const Mark m_Mark) : Player(m_Mark) {
 	}
 
-	int RandomPlayer::getMove(const Board &m_Board) {
+	int RandomPlayer::getMove(const Board & board) {
 		int tileChoice = generateRandInRange();
-		while (m_Board.tileOccupied(tileChoice)) {
+		while (board.tileOccupied(tileChoice)) {
 			tileChoice = generateRandInRange();
 		}
 		return tileChoice;

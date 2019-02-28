@@ -1,12 +1,10 @@
-#include "UI.hpp"
-
-using namespace std;
+#include "CommandLineUI.hpp"
 
 namespace training {
-	UI::UI(istream &input, ostream &output, int delayTime)
-		: m_Input(input), m_Output(output), m_delayTime(delayTime) {}
+	CommandLineUI::CommandLineUI(istream & m_Input, ostream & m_Output, int m_DelayTime)
+		: m_Input(m_Input), m_Output(m_Output), m_DelayTime(m_DelayTime) {}
 
-	int UI::getValidMove(const Board &board) {
+	int CommandLineUI::getValidMove(const Board & board) {
 		string input = getTileInput(board);
 		while (!isInputValid(input, board)) {
 			announceInvalidInput();
@@ -15,28 +13,28 @@ namespace training {
 		return stoi(input);
 	}
 
-	void UI::welcome() {
+	void CommandLineUI::welcome() {
 		m_Output << welcomeMessage + newline + newline;
 	}
 
-	void UI::displayMove(const Board &board) {
+	void CommandLineUI::displayMove(const Board &board) {
 		m_Output << displayMoveMessage + newline + newline + outputBoard(board) + newline;
-		std::this_thread::sleep_for(std::chrono::milliseconds(m_delayTime));
+		this_thread::sleep_for(chrono::milliseconds(m_DelayTime));
 	}
 
-	void UI::announceWinner(const Mark mark) {
+	void CommandLineUI::announceWinner(const Mark mark) {
 		m_Output << getOccupiedMarkAsString(mark) + winnerMessage + newline + newline;
 	}
 
-	void UI::announceDraw() {
+	void CommandLineUI::announceDraw() {
 		m_Output << drawMessage + newline + newline;
 	}
 
-	void UI::announceInvalidInput() {
+	void CommandLineUI::announceInvalidInput() {
 		m_Output << invalidInputMessage + newline + newline;
 	}
 
-	int UI::getValidMode() {
+	int CommandLineUI::getValidMode() {
 		string input = getModeInput();
 		while (!isModeValid(input)) {
 			announceInvalidInput();
@@ -45,7 +43,7 @@ namespace training {
 		return stoi(input);
 	}
 
-	bool UI::isModeValid(const string input) {
+	bool CommandLineUI::isModeValid(const string input) {
 		for (auto mode : allModes) {
 			if (input == to_string(mode + 1)) {
 				return true;
@@ -54,23 +52,23 @@ namespace training {
 		return false;
 	}
 
-	string UI::getModeInput() {
+	string CommandLineUI::getModeInput() {
 		m_Output << askForModeMessage + newline + newline;
 		return getInput();
 	}
 
-	string UI::getTileInput(const Board &board) {
+	string CommandLineUI::getTileInput(const Board &board) {
 		askForTile(board);
 		return getInput();
 	}
 
-	string UI::getInput() {
+	string CommandLineUI::getInput() {
 		string input;
 		m_Input >> input;
 		return input;
 	}
 
-	bool UI::isInputValid(const string input, const Board &board) {
+	bool CommandLineUI::isInputValid(const string input, const Board &board) {
 		int dimension = board.getM_Dimension();
 		int size = dimension * dimension;
 		for (int i = 1; i < size + 1; ++i) {
@@ -81,7 +79,7 @@ namespace training {
 		return false;
 	}
 
-	string UI::outputBoard(const Board &board) {
+	string CommandLineUI::outputBoard(const Board &board) {
 		int dimension = board.getM_Dimension();
 		int size = dimension * dimension;
 		string boardRepresentation;
@@ -94,15 +92,15 @@ namespace training {
 		return boardRepresentation;
 	}
 
-	string UI::getMarkAsString(const Mark mark, const int number) {
+	string CommandLineUI::getMarkAsString(const Mark mark, const int number) {
 		return (mark == _) ? to_string(number) : getOccupiedMarkAsString(mark);
 	}
 
-	string UI::getOccupiedMarkAsString(const Mark mark) {
+	string CommandLineUI::getOccupiedMarkAsString(const Mark mark) {
 		return (mark == X) ? XString : OString;
 	}
 
-	void UI::askForTile(const Board &board) {
+	void CommandLineUI::askForTile(const Board &board) {
 		m_Output << outputBoard(board) + newline + askForTileMessage + newline;
 	}
 }

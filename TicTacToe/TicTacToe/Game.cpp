@@ -1,17 +1,15 @@
 #include "Game.hpp"
 
-using namespace std;
-
 namespace training {
-	Game::Game(Player &playerOne, Player &playerTwo, UI &ui, int m_Dimension)
-		: m_PlayerOne(playerOne),
-		m_PlayerTwo(playerTwo),
-		ui(ui),
+	Game::Game(Player & m_PlayerOne, Player & m_PlayerTwo, UI & m_UI, int m_Dimension)
+		: m_PlayerOne(m_PlayerOne),
+		m_PlayerTwo(m_PlayerTwo),
+		m_UI(m_UI),
 		m_Board(Board(m_Dimension)) {}
 
 	void Game::play() {
 		Player &activePlayer = m_PlayerOne;
-		ui.welcome();
+		m_UI.welcome();
 		playAllTurns(activePlayer);
 	}
 
@@ -33,7 +31,7 @@ namespace training {
 	void Game::playTurn(Player &activePlayer) {
 		int move = activePlayer.getMove(m_Board);
 		m_Board.setMark(move, activePlayer.getMark());
-		ui.displayMove(m_Board);
+		m_UI.displayMove(m_Board);
 	}
 
 	Player &Game::alternate(Player &activePlayer) {
@@ -41,6 +39,6 @@ namespace training {
 	}
 
 	void Game::announceResult(Player &activePlayer) {
-		(m_Board.isWin()) ? ui.announceWinner(activePlayer.getMark()) : ui.announceDraw();
+		(m_Board.isWin()) ? m_UI.announceWinner(activePlayer.getMark()) : m_UI.announceDraw();
 	}
 }

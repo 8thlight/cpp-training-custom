@@ -2,8 +2,6 @@
 #include <cmath>
 #include <iostream>
 
-using namespace std;
-
 namespace training {
 	Board::Board(const int m_Dimension) : m_Dimension(m_Dimension) {
 		int size = m_Dimension * m_Dimension;
@@ -18,7 +16,7 @@ namespace training {
 		return isWin() || isDraw();
 	}
 
-	Board Board::withMarks(const std::vector<Mark> &marks) {
+	Board Board::withMarks(const vector<Mark> &marks) {
 		int thisDimension = static_cast<int>(sqrt(marks.size()));
 		Board board(thisDimension);
 		for (unsigned int i = 0; i < marks.size(); i++) {
@@ -45,7 +43,7 @@ namespace training {
 			anyLineWin(getDiagIndices());
 	}
 
-	bool Board::anyLineWin(std::vector<std::vector<int>> lines) const {
+	bool Board::anyLineWin(vector<vector<int>> lines) const {
 		for (const auto &line : lines) {
 			if (isLineWin(line)) {
 				return true;
@@ -54,11 +52,11 @@ namespace training {
 		return false;
 	}
 
-	bool Board::isLineWin(std::vector<int> positions) const {
+	bool Board::isLineWin(vector<int> positions) const {
 		return m_Marks[positions[0]] != _ && allMarksIdentical(positions);
 	}
 
-	bool Board::allMarksIdentical(std::vector<int> positions) const {
+	bool Board::allMarksIdentical(vector<int> positions) const {
 		int firstMark = m_Marks[positions[0]];
 		for (auto position : positions) {
 			if (m_Marks[position] != firstMark)
@@ -68,8 +66,8 @@ namespace training {
 	}
 
 	vector<vector<int>> Board::getColumnIndices() const {
-		std::vector<int> colStartingValues = getColStartingValues();
-		std::vector<std::vector<int>> allCols;
+		vector<int> colStartingValues = getColStartingValues();
+		vector<vector<int>> allCols;
 		allCols.reserve((unsigned long)m_Dimension);
 		for (auto startingValue : colStartingValues) {
 			allCols.push_back(makeCol(startingValue));
@@ -78,7 +76,7 @@ namespace training {
 	}
 
 	vector<int> Board::getColStartingValues() const {
-		std::vector<int> colStartingValues;
+		vector<int> colStartingValues;
 		colStartingValues.reserve((unsigned long)m_Dimension);
 		for (int i = 0; i < m_Dimension; ++i) {
 			colStartingValues.push_back(i);
@@ -86,8 +84,8 @@ namespace training {
 		return colStartingValues;
 	}
 
-	std::vector<int> Board::makeCol(int startingValue) const {
-		std::vector<int> line;
+	vector<int> Board::makeCol(int startingValue) const {
+		vector<int> line;
 		line.reserve((unsigned long)m_Dimension);
 		for (int i = 0; i < m_Dimension; ++i) {
 			int incrementor = startingValue + i * m_Dimension;
@@ -97,8 +95,8 @@ namespace training {
 	}
 
 	vector<vector<int>> Board::getRowIndices() const {
-		std::vector<int> rowStartingValues = getRowStartingValues();
-		std::vector<std::vector<int>> allRows;
+		vector<int> rowStartingValues = getRowStartingValues();
+		vector<vector<int>> allRows;
 		allRows.reserve((unsigned long)m_Dimension);
 		for (auto startingValue : rowStartingValues) {
 			allRows.push_back(makeRow(startingValue));
@@ -107,7 +105,7 @@ namespace training {
 	}
 
 	vector<int> Board::getRowStartingValues() const {
-		std::vector<int> rowStartingValues;
+		vector<int> rowStartingValues;
 		rowStartingValues.reserve((unsigned long)m_Dimension);
 		for (int i = 0; i < m_Dimension; ++i) {
 			rowStartingValues.push_back(i * m_Dimension);
@@ -115,8 +113,8 @@ namespace training {
 		return rowStartingValues;
 	}
 
-	std::vector<int> Board::makeRow(int startingValue) const {
-		std::vector<int> line;
+	vector<int> Board::makeRow(int startingValue) const {
+		vector<int> line;
 		line.reserve((unsigned long)m_Dimension);
 		for (int i = 0; i < m_Dimension; ++i) {
 			line.push_back(startingValue);
@@ -128,14 +126,14 @@ namespace training {
 
 
 	vector<vector<int>> Board::getDiagIndices() const {
-		std::vector<std::vector<int>> allDiags;
+		vector<vector<int>> allDiags;
 		allDiags.push_back(makeLeftDiag());
 		allDiags.push_back(makeRightDiag());
 		return allDiags;
 	}
 
-	std::vector<int> Board::makeLeftDiag() const {
-		std::vector<int> line;
+	vector<int> Board::makeLeftDiag() const {
+		vector<int> line;
 		line.reserve((unsigned long)m_Dimension);
 		for (int j = 0; j < m_Dimension; ++j) {
 			int incrementor = j * m_Dimension + j;
@@ -144,8 +142,8 @@ namespace training {
 		return line;
 	}
 
-	std::vector<int> Board::makeRightDiag() const {
-		std::vector<int> line;
+	vector<int> Board::makeRightDiag() const {
+		vector<int> line;
 		line.reserve((unsigned long)m_Dimension);
 		for (int j = 1; j < m_Dimension + 1; ++j) {
 			int incrementor = j * m_Dimension - j;

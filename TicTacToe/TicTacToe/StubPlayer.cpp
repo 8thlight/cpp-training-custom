@@ -8,7 +8,7 @@ namespace training {
 		return m_SpacesToReturn[m_CurrentIndex++];
 	}
 
-	void StubPlayer::willSelectSpaces(const std::vector<int> m_Spaces) {
-		m_SpacesToReturn = m_Spaces;
+	void StubPlayer::willSelectSpaces(const vector<int> spaces) {
+		m_SpacesToReturn = spaces;
 	}
 }

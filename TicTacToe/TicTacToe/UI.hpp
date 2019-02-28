@@ -1,11 +1,6 @@
 #pragma once
 
-#include <string>
-#include <chrono>
-#include <thread>
-#include <iostream>
 #include "Board.hpp"
-#include "Mode.hpp"
 #include "Mark.hpp"
 
 using namespace std;
@@ -23,45 +18,20 @@ static const string winnerMessage = " is the winner!";
 static const string drawMessage = "It was a draw...";
 static const string invalidInputMessage = "That input was not valid...";
 
-namespace training {
-	class UI {
-	public:
-		explicit UI(istream & = cin, ostream & = cout, int = 0);
+namespace training { 
+	struct UI {
+		virtual int getValidMove(const Board & board) = 0;
 
-		int getValidMove(const Board & m_Board);
+		virtual void welcome() = 0;
 
-		void welcome();
+		virtual void displayMove(const Board & board) = 0;
 
-		void displayMove(const Board & m_Board);
+		virtual void announceWinner(Mark mark) = 0;
 
-		void announceWinner(Mark m_Mark);
+		virtual void announceDraw() = 0;
 
-		void announceDraw();
+		virtual void announceInvalidInput() = 0;
 
-		void announceInvalidInput();
-
-		int getValidMode();
-
-	private:
-		istream & m_Input;
-		ostream &m_Output;
-		int m_delayTime;
-		string getInput();
-
-		bool isInputValid(string input, const Board &m_Board);
-
-		string getMarkAsString(Mark m_Mark, int number);
-
-		string getOccupiedMarkAsString(Mark m_Mark);
-
-		string getTileInput(const Board & m_Board);
-
-		string getModeInput();
-
-		void askForTile(const Board & m_Board);
-
-		bool isModeValid(string input);
-
-		string outputBoard(const Board & m_Board);
+		virtual int getValidMode() = 0;
 	};
 }

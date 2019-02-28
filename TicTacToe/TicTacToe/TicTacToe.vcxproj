@@ -35,7 +35,6 @@
   <ItemGroup>
     <ClInclude Include="Board.hpp" />
     <ClInclude Include="Game.hpp" />
-    <ClInclude Include="Header.h" />
     <ClInclude Include="HumanPlayer.hpp" />
     <ClInclude Include="Mark.hpp" />
     <ClInclude Include="Mode.hpp" />
@@ -43,7 +42,9 @@
     <ClInclude Include="RandomPlayer.hpp" />
     <ClInclude Include="StubPlayer.hpp" />
     <ClInclude Include="TicTacToe.hpp" />
+    <ClInclude Include="CommandLineUI.hpp" />
     <ClInclude Include="UI.hpp" />
+    <ClInclude Include="UIStub.hpp" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Board.cpp" />
@@ -59,8 +60,9 @@
     <ClCompile Include="StubPlayer.cpp" />
     <ClCompile Include="TicTacToe.cpp" />
     <ClCompile Include="TicTacToeTest.cpp" />
-    <ClCompile Include="UI.cpp" />
-    <ClCompile Include="UITest.cpp" />
+    <ClCompile Include="CommandLineUI.cpp" />
+    <ClCompile Include="CommandLineUITest.cpp" />
+    <ClCompile Include="UIStub.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

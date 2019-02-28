@@ -1,29 +1,29 @@
 #include "TicTacToe.hpp"
 
 namespace training {
-	TicTacToe::TicTacToe(UI &ui, int m_Dimension) : ui(ui), m_Dimension(m_Dimension) {}
+	TicTacToe::TicTacToe(UI & m_UI, int m_Dimension) : m_UI(m_UI), m_Dimension(m_Dimension) {}
 
 	void TicTacToe::start() {
-		int mode = ui.getValidMode();
+		int mode = m_UI.getValidMode();
 		array<unique_ptr<Player>, 2> players = makePlayers(mode);
-		Game game(*players[0], *players[1], ui, m_Dimension);
+		Game game(*players[0], *players[1], m_UI, m_Dimension);
 		game.play();
 	}
 
-	std::array<unique_ptr<Player>, 2> TicTacToe::makePlayers(const int mode) {
-		std::array<unique_ptr<Player>, 2> players{};
+	array<unique_ptr<Player>, 2> TicTacToe::makePlayers(const int mode) {
+		array<unique_ptr<Player>, 2> players{};
 		switch (mode - 1) {
 		case hvh:
-			players[0] = make_unique<HumanPlayer>(X, ui);
-			players[1] = make_unique<HumanPlayer>(O, ui);
+			players[0] = make_unique<HumanPlayer>(X, m_UI);
+			players[1] = make_unique<HumanPlayer>(O, m_UI);
 			break;
 		case hvc:
-			players[0] = make_unique<HumanPlayer>(X, ui);
+			players[0] = make_unique<HumanPlayer>(X, m_UI);
 			players[1] = make_unique<RandomPlayer>(O);
 			break;
 		case cvh:
 			players[0] = make_unique<RandomPlayer>(X);
-			players[1] = make_unique<HumanPlayer>(O, ui);
+			players[1] = make_unique<HumanPlayer>(O, m_UI);
 			break;
 		case cvc:
 			players[0] = make_unique<RandomPlayer>(X);

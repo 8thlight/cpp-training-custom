@@ -4,17 +4,19 @@
 #include "Mark.hpp"
 #include <vector>
 
+using namespace std;
+
 namespace training {
 	class StubPlayer : public Player {
 	public:
 		explicit StubPlayer(Mark m_Mark);
 
-		int getMove(const Board & m_Board) override;
+		int getMove(const Board & board) override;
 
-		void willSelectSpaces(std::vector<int> m_Spaces);
+		void willSelectSpaces(vector<int> spaces);
 
 	private:
-		std::vector<int> m_SpacesToReturn;
+		vector<int> m_SpacesToReturn;
 		int m_CurrentIndex;
 	};
 }
