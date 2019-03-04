@@ -12,46 +12,47 @@
 using namespace std;
 
 namespace training {
-	class CommandLineUI : public UI {
-	public:
-		explicit CommandLineUI(istream & input = cin, 
-			ostream & output = cout, int delayTime = 1500);
+    class CommandLineUI : public UI {
+    public:
+        explicit CommandLineUI(istream &input = cin,
+                               ostream &output = cout,
+                               int delayTime = 1500);
 
-		int getValidMove(const Board & board) override;
+        int getValidMove(const Board &board) override;
 
-		void welcome() override;
+        void welcome() override;
 
-		void displayMove(const Board & board) override;
+        void displayMove(const Board &board) override;
 
-		void announceWinner(Mark mark) override;
+        void announceWinner(Mark mark) override;
 
-		void announceDraw() override;
+        void announceDraw() override;
 
-		void announceInvalidInput() override;
+        void announceInvalidInput() override;
 
-		int getValidMode() override;
+        int getValidMode() override;
 
-	private:
-		istream & m_Input;
-		ostream & m_Output;
-		int m_DelayTime;
+    private:
+        istream &m_Input;
+        ostream &m_Output;
+        int m_DelayTime;
 
-		string getInput();
+        string getInput();
 
-		bool isInputValid(string input, const Board & board);
+        bool isInputValid(string input, const Board &board);
 
-		string getMarkAsString(Mark mark, int number);
+        string getMarkAsString(Mark mark, int number);
 
-		string getOccupiedMarkAsString(Mark mark);
+        string getOccupiedMarkAsString(Mark mark);
 
-		string getTileInput(const Board & board);
+        string getTileInput(const Board &board);
 
-		string getModeInput();
+        string getModeInput();
 
-		void askForTile(const Board & m_Board);
+        void askForTile(const Board &m_Board);
 
-		bool isModeValid(string input);
+        bool isModeValid(string input);
 
-		string outputBoard(const Board & m_Board);
-	};
+        string outputBoard(const Board &m_Board);
+    };
 }

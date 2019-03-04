@@ -9,32 +9,32 @@
 using namespace std;
 
 namespace training {
-	class UIStub : public UI {
-	public:
-		explicit UIStub(vector<string> mockInputs = { "" });
+    class UIStub : public UI {
+    public:
+        explicit UIStub(vector <string> mockInputs = {""});
 
-		int getValidMove(const Board &) override;
+        int getValidMove(const Board &) override;
 
-		void welcome() override;
+        void welcome() override;
 
-		void displayMove(const Board &) override;
+        void displayMove(const Board &) override;
 
-		void announceWinner(Mark) override;
+        void announceWinner(Mark) override;
 
-		void announceDraw() override;
+        void announceDraw() override;
 
-		void announceInvalidInput() override;
+        void announceInvalidInput() override;
 
-		int getValidMode() override;
+        int getValidMode() override;
 
-		bool wasWinAnnounced();
+        bool wasWinAnnounced();
 
-		bool wasDrawAnnounced();
+        bool wasDrawAnnounced();
 
-	private:
-		vector<string> m_MockInputs;
-		int m_InputCounter;
-		bool m_WinAnnounced;
-		bool m_DrawAnnounced;
-	};
+    private:
+        vector <string> m_MockInputs;
+        int m_InputCounter;
+        bool m_WinAnnounced;
+        bool m_DrawAnnounced;
+    };
 }

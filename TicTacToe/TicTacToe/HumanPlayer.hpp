@@ -7,13 +7,13 @@
 #include "CommandLineUI.hpp"
 
 namespace training {
-	class HumanPlayer : public Player {
-	public:
-		explicit HumanPlayer(Mark mark, UI & UI);
+    class HumanPlayer : public Player {
+    public:
+        explicit HumanPlayer(Mark mark, UI &UI);
 
-		int getMove(const Board & board) override;
+        int getMove(const Board &board) override;
 
-	private:
-		UI & m_UI;
-	};
+    private:
+        UI &m_UI;
+    };
 }
