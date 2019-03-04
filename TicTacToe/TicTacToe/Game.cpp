@@ -8,7 +8,7 @@ namespace training {
 		m_Board(Board(dimension)) {}
 
 	void Game::play() {
-		Player & activePlayer = m_PlayerOne;
+		Player * activePlayer = & m_PlayerOne;
 		m_UI.welcome();
 		playAllTurns(activePlayer);
 	}
@@ -17,28 +17,28 @@ namespace training {
 		return m_Board.isGameOver();
 	}
 
-	void Game::playAllTurns(Player & activePlayer) {
+	void Game::playAllTurns(Player * activePlayer) {
 		playTurn(activePlayer);
 		if (isGameOver()) {
 			announceResult(activePlayer);
 		}
 		else {
-			Player &nextPlayer = alternate(activePlayer);
+			Player * nextPlayer = alternate(activePlayer);
 			playAllTurns(nextPlayer);
 		}
 	}
 
-	void Game::playTurn(Player & activePlayer) {
-		int move = activePlayer.getMove(m_Board);
-		m_Board.setMark(move, activePlayer.getMark());
+	void Game::playTurn(Player * activePlayer) {
+		int move = activePlayer->getMove(m_Board);
+		m_Board.setMark(move, activePlayer->getMark());
 		m_UI.displayMove(m_Board);
 	}
 
-	Player & Game::alternate(Player & activePlayer) {
-		return (& activePlayer == & m_PlayerOne) ? m_PlayerTwo : m_PlayerOne;
+	Player * Game::alternate(Player * activePlayer) {
+		return (activePlayer == & m_PlayerOne) ? & m_PlayerTwo : & m_PlayerOne;
 	}
 
-	void Game::announceResult(Player & activePlayer) {
-		(m_Board.isWin()) ? m_UI.announceWinner(activePlayer.getMark()) : m_UI.announceDraw();
+	void Game::announceResult(Player * activePlayer) {
+		(m_Board.isWin()) ? m_UI.announceWinner(activePlayer->getMark()) : m_UI.announceDraw();
 	}
 }

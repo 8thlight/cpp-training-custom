@@ -21,12 +21,12 @@ namespace training {
 		Player & m_PlayerTwo;
 		UI & m_UI;
 
-		void playAllTurns(Player & activePlayer);
+		void playAllTurns(Player * activePlayer);
 
-		void playTurn(Player & activePlayer);
+		void playTurn(Player * activePlayer);
 
-		void announceResult(Player & activePlayer);
+		void announceResult(Player * activePlayer);
 
-		Player &alternate(Player & activePlayer);
+		Player * alternate(Player * activePlayer);
 	};
 }
