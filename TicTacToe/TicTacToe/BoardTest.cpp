@@ -13,37 +13,81 @@ namespace training {
 		EXPECT_FALSE(board.isGameOver());
 	}
 
-	TEST(Board, WithWinningColumn) {
-		Board board = Board::withMarks({ O, X, X,
+	TEST(Board, WithWinningColumn1) {
+		Board board = Board::withMarks({
+			X, O, O,
+			X, _, _,
+			X, _, O });
+		EXPECT_TRUE(board.isWin());
+	}
+
+	TEST(Board, WithWinningColumn2) {
+		Board board = Board::withMarks({
+			O, X, O,
+			O, X, _,
+			_, X, X });
+		EXPECT_TRUE(board.isWin());
+	}
+
+	TEST(Board, WithWinningColumn3) {
+		Board board = Board::withMarks({
+			O, X, X,
 			O, O, X,
 			_, _, X });
 		EXPECT_TRUE(board.isWin());
 	}
 
-	TEST(Board, WithWinningRow) {
-		Board board = Board::withMarks({ X, O, O,
+	TEST(Board, WithWinningRow1) {
+		Board board = Board::withMarks({
+			X, X, X,
+			O, _, _,
+			_, O, O });
+		EXPECT_TRUE(board.isWin());
+	}
+
+	TEST(Board, WithWinningRow2) {
+		Board board = Board::withMarks({
+			O, _, _,
+			X, X, X,
+			_, O, O });
+		EXPECT_TRUE(board.isWin());
+	}
+
+	TEST(Board, WithWinningRow3) {
+		Board board = Board::withMarks({ 
+			X, O, O,
 			O, _, _,
 			X, X, X });
 		EXPECT_TRUE(board.isWin());
 	}
 
-	TEST(Board, WithWinningDiagonal) {
-		Board board = Board::withMarks({ O, X, X,
+	TEST(Board, WithWinningDiagonal1) {
+		Board board = Board::withMarks({ 
+			O, X, X,
 			_, X, O,
-			X, _, O
-			});
+			X, _, O});
+		EXPECT_TRUE(board.isWin());
+	}
+
+	TEST(Board, WithWinningDiagonal2) {
+		Board board = Board::withMarks({
+			O, X, X,
+			_, O, X,
+			X, _, O});
 		EXPECT_TRUE(board.isWin());
 	}
 
 	TEST(Board, EndingInDraw) {
-		Board board = Board::withMarks({ X, X, O,
+		Board board = Board::withMarks({ 
+			X, X, O,
 			O, O, X,
 			X, O, X });
 		EXPECT_TRUE(board.isDraw());
 	}
 
 	TEST(Board, WithWin4x4) {
-		Board board = Board::withMarks({ X, X, X, X,
+		Board board = Board::withMarks({ 
+			X, X, X, X,
 			O, O, X, _,
 			O, O, X, O,
 			O, X, _, _ });
@@ -51,7 +95,8 @@ namespace training {
 	}
 
 	TEST(Board, WithDraw4x4) {
-		Board board = Board::withMarks({ X, X, X, O,
+		Board board = Board::withMarks({ 
+			X, X, X, O,
 			O, O, X, X,
 			O, O, X, O,
 			O, X, O, X });
