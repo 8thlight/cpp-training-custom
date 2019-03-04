@@ -13,7 +13,7 @@ namespace training {
 		playAllTurns(activePlayer);
 	}
 
-	bool Game::isGameOver() const {
+	bool Game::isGameOver() {
 		return m_Board.isGameOver();
 	}
 

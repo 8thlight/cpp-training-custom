@@ -1,6 +1,6 @@
-#include "Board.hpp"
 #include <cmath>
 #include <iostream>
+#include "Board.hpp"
 
 namespace training {
 	Board::Board(const int dimension) : m_Dimension(dimension) {
@@ -26,11 +26,7 @@ namespace training {
 	}
 
 	bool Board::isDraw() const {
-		for (auto m_Mark : m_Marks) {
-			if (m_Mark == _)
-				return false;
-		}
-		return true;
+		return find(begin(m_Marks), end(m_Marks), _) == end(m_Marks);
 	}
 
 	Mark Board::getMark(int position) const {
@@ -43,7 +39,7 @@ namespace training {
 			anyLineWin(getDiagIndices());
 	}
 
-	bool Board::anyLineWin(vector<vector<int>> lines) const {
+	bool Board::anyLineWin(doubleVector lines) const {
 		for (const auto &line : lines) {
 			if (isLineWin(line)) {
 				return true;
@@ -65,9 +61,9 @@ namespace training {
 		return true;
 	}
 
-	vector<vector<int>> Board::getColumnIndices() const {
+	doubleVector Board::getColumnIndices() const {
 		vector<int> colStartingValues = getColStartingValues();
-		vector<vector<int>> allCols;
+		doubleVector allCols;
 		allCols.reserve((unsigned long)m_Dimension);
 		for (auto startingValue : colStartingValues) {
 			allCols.push_back(makeCol(startingValue));
@@ -94,9 +90,9 @@ namespace training {
 		return line;
 	}
 
-	vector<vector<int>> Board::getRowIndices() const {
+	doubleVector Board::getRowIndices() const {
 		vector<int> rowStartingValues = getRowStartingValues();
-		vector<vector<int>> allRows;
+		doubleVector allRows;
 		allRows.reserve((unsigned long)m_Dimension);
 		for (auto startingValue : rowStartingValues) {
 			allRows.push_back(makeRow(startingValue));
@@ -123,7 +119,7 @@ namespace training {
 		return line;
 	}
 
-	vector<vector<int>> Board::getDiagIndices() const {
+	doubleVector Board::getDiagIndices() const {
 		vector<vector<int>> allDiags;
 		allDiags.push_back(makeLeftDiag());
 		allDiags.push_back(makeRightDiag());

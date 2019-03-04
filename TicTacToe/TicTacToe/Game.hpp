@@ -13,7 +13,7 @@ namespace training {
 
 		void play();
 
-		bool isGameOver() const;
+		bool isGameOver();
 
 	private:
 		Board m_Board;

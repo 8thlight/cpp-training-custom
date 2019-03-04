@@ -10,7 +10,7 @@ namespace training {
 
 		virtual int getMove(const Board & board) = 0;
 
-		Mark getMark() const;
+		Mark getMark();
 
 		virtual ~Player() = default;
 

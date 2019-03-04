@@ -1,5 +1,6 @@
 #pragma once
 
+#include <string>
 #include "Board.hpp"
 #include "Mark.hpp"
 

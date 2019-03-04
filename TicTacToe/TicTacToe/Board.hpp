@@ -6,6 +6,8 @@
 
 using namespace std;
 
+typedef vector<vector<int>> doubleVector;
+
 namespace training {
 	class Board {
 
@@ -32,25 +34,25 @@ namespace training {
 		const int m_Dimension;
 		vector<Mark> m_Marks;
 
-		bool anyLineWin(vector<vector<int>> lines) const;
+		bool anyLineWin(doubleVector lines) const;
 
 		bool isLineWin(vector<int> positions) const;
 
 		bool allMarksIdentical(vector<int> positions) const;
 
-		vector<vector<int>> getColumnIndices() const;
+		doubleVector getColumnIndices() const;
 
 		vector<int> getColStartingValues() const;
 
 		vector<int> makeCol(int startingValue) const;
 
-		vector<vector<int>> getRowIndices() const;
+		doubleVector getRowIndices() const;
 
 		vector<int> getRowStartingValues() const;
 
 		vector<int> makeRow(int startingValue) const;
 
-		vector<vector<int>> getDiagIndices() const;
+		doubleVector getDiagIndices() const;
 
 		vector<int> makeLeftDiag() const;
 
