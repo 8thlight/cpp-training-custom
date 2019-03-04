@@ -1,22 +1,22 @@
 #include "UIStub.hpp"
 
 namespace training {
-	UIStub::UIStub(vector<string> m_MockInputs) : m_MockInputs(m_MockInputs) {
+	UIStub::UIStub(vector<string> mockInputs) : m_MockInputs(mockInputs) {
 		m_InputCounter = 0;
 		m_WinAnnounced = false;
 		m_DrawAnnounced = false;
 	}
 
-	int UIStub::getValidMove(const Board &board) {
+	int UIStub::getValidMove(const Board &) {
 		m_InputCounter++;
 		return stoi(m_MockInputs[m_InputCounter - 1]);
 	}
 
 	void UIStub::welcome() {}
 
-	void UIStub::displayMove(const Board &board) {}
+	void UIStub::displayMove(const Board &) {}
 
-	void UIStub::announceWinner(const Mark mark) {
+	void UIStub::announceWinner(const Mark) {
 		m_WinAnnounced = true;
 	}
 

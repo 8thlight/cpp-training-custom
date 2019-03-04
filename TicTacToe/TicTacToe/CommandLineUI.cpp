@@ -1,8 +1,8 @@
 #include "CommandLineUI.hpp"
 
 namespace training {
-	CommandLineUI::CommandLineUI(istream & m_Input, ostream & m_Output, int m_DelayTime)
-		: m_Input(m_Input), m_Output(m_Output), m_DelayTime(m_DelayTime) {}
+	CommandLineUI::CommandLineUI(istream & input, ostream & output, int delayTime)
+		: m_Input(input), m_Output(output), m_DelayTime(delayTime) {}
 
 	int CommandLineUI::getValidMove(const Board & board) {
 		string input = getTileInput(board);
@@ -17,7 +17,7 @@ namespace training {
 		m_Output << welcomeMessage + newline + newline;
 	}
 
-	void CommandLineUI::displayMove(const Board &board) {
+	void CommandLineUI::displayMove(const Board & board) {
 		m_Output << displayMoveMessage + newline + newline + outputBoard(board) + newline;
 		this_thread::sleep_for(chrono::milliseconds(m_DelayTime));
 	}
@@ -57,7 +57,7 @@ namespace training {
 		return getInput();
 	}
 
-	string CommandLineUI::getTileInput(const Board &board) {
+	string CommandLineUI::getTileInput(const Board & board) {
 		askForTile(board);
 		return getInput();
 	}
@@ -68,8 +68,8 @@ namespace training {
 		return input;
 	}
 
-	bool CommandLineUI::isInputValid(const string input, const Board &board) {
-		int dimension = board.getM_Dimension();
+	bool CommandLineUI::isInputValid(const string input, const Board & board) {
+		int dimension = board.getDimension();
 		int size = dimension * dimension;
 		for (int i = 1; i < size + 1; ++i) {
 			if (input == to_string(i)) {
@@ -79,8 +79,8 @@ namespace training {
 		return false;
 	}
 
-	string CommandLineUI::outputBoard(const Board &board) {
-		int dimension = board.getM_Dimension();
+	string CommandLineUI::outputBoard(const Board & board) {
+		int dimension = board.getDimension();
 		int size = dimension * dimension;
 		string boardRepresentation;
 		for (int i = 1; i < size + 1; ++i) {
@@ -100,7 +100,7 @@ namespace training {
 		return (mark == X) ? XString : OString;
 	}
 
-	void CommandLineUI::askForTile(const Board &board) {
+	void CommandLineUI::askForTile(const Board & board) {
 		m_Output << outputBoard(board) + newline + askForTileMessage + newline;
 	}
 }

@@ -9,7 +9,7 @@
 namespace training {
 	class HumanPlayer : public Player {
 	public:
-		explicit HumanPlayer(Mark m_Mark, UI & m_UI);
+		explicit HumanPlayer(Mark mark, UI & UI);
 
 		int getMove(const Board & board) override;
 

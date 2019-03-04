@@ -10,13 +10,13 @@ namespace training {
 	class Board {
 
 	public:
-		explicit Board(int m_Dimension);
+		explicit Board(int dimension);
 
 		void setMark(int position, Mark mark);
 
 		bool isGameOver() const;
 
-		static Board withMarks(const vector<Mark> &marks);
+		static Board withMarks(const vector<Mark> & marks);
 
 		bool isWin() const;
 
@@ -26,7 +26,7 @@ namespace training {
 
 		Mark getMark(int position) const;
 
-		const int getM_Dimension() const;
+		const int getDimension() const;
 
 	private:
 		const int m_Dimension;

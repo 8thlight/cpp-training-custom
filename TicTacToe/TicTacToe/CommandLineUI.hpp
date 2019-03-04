@@ -14,8 +14,8 @@ using namespace std;
 namespace training {
 	class CommandLineUI : public UI {
 	public:
-		explicit CommandLineUI(istream & m_Input = cin, 
-			ostream & m_Output = cout, int m_delayTime = 1500);
+		explicit CommandLineUI(istream & input = cin, 
+			ostream & output = cout, int delayTime = 1500);
 
 		int getValidMove(const Board & board) override;
 

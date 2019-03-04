@@ -1,10 +1,10 @@
 #include "StubPlayer.hpp"
 
 namespace training {
-	StubPlayer::StubPlayer(const Mark m_Mark)
-		: Player(m_Mark), m_CurrentIndex(0) {}
+	StubPlayer::StubPlayer(const Mark mark)
+		: Player(mark), m_CurrentIndex(0) {}
 
-	int StubPlayer::getMove(const Board & m_Board) {
+	int StubPlayer::getMove(const Board & board) {
 		return m_SpacesToReturn[m_CurrentIndex++];
 	}
 

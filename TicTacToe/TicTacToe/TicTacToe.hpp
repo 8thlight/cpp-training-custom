@@ -12,7 +12,7 @@ using namespace std;
 namespace training {
 	class TicTacToe {
 	public:
-		explicit TicTacToe(UI & m_UI, int m_Dimension);
+		explicit TicTacToe(UI & UI, int dimension);
 
 		void start();
 

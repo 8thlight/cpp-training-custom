@@ -7,7 +7,7 @@
 namespace training {
 	class RandomPlayer : public Player {
 	public:
-		explicit RandomPlayer(Mark m_Mark);
+		explicit RandomPlayer(Mark mark);
 
 		int getMove(const Board & board) override;
 

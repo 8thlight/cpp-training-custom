@@ -1,7 +1,7 @@
 #include "TicTacToe.hpp"
 
 namespace training {
-	TicTacToe::TicTacToe(UI & m_UI, int m_Dimension) : m_UI(m_UI), m_Dimension(m_Dimension) {}
+	TicTacToe::TicTacToe(UI & UI, int dimension) : m_UI(UI), m_Dimension(dimension) {}
 
 	void TicTacToe::start() {
 		int mode = m_UI.getValidMode();

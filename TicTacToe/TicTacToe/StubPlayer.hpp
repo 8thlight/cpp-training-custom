@@ -9,7 +9,7 @@ using namespace std;
 namespace training {
 	class StubPlayer : public Player {
 	public:
-		explicit StubPlayer(Mark m_Mark);
+		explicit StubPlayer(Mark mark);
 
 		int getMove(const Board & board) override;
 

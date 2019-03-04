@@ -1,14 +1,14 @@
 #include "Game.hpp"
 
 namespace training {
-	Game::Game(Player & m_PlayerOne, Player & m_PlayerTwo, UI & m_UI, int m_Dimension)
-		: m_PlayerOne(m_PlayerOne),
-		m_PlayerTwo(m_PlayerTwo),
-		m_UI(m_UI),
-		m_Board(Board(m_Dimension)) {}
+	Game::Game(Player & playerOne, Player & playerTwo, UI & UI, int dimension)
+		: m_PlayerOne(playerOne),
+		m_PlayerTwo(playerTwo),
+		m_UI(UI),
+		m_Board(Board(dimension)) {}
 
 	void Game::play() {
-		Player &activePlayer = m_PlayerOne;
+		Player & activePlayer = m_PlayerOne;
 		m_UI.welcome();
 		playAllTurns(activePlayer);
 	}
@@ -17,7 +17,7 @@ namespace training {
 		return m_Board.isGameOver();
 	}
 
-	void Game::playAllTurns(Player &activePlayer) {
+	void Game::playAllTurns(Player & activePlayer) {
 		playTurn(activePlayer);
 		if (isGameOver()) {
 			announceResult(activePlayer);
@@ -28,17 +28,17 @@ namespace training {
 		}
 	}
 
-	void Game::playTurn(Player &activePlayer) {
+	void Game::playTurn(Player & activePlayer) {
 		int move = activePlayer.getMove(m_Board);
 		m_Board.setMark(move, activePlayer.getMark());
 		m_UI.displayMove(m_Board);
 	}
 
-	Player &Game::alternate(Player &activePlayer) {
-		return (&activePlayer == &m_PlayerOne) ? m_PlayerTwo : m_PlayerOne;
+	Player & Game::alternate(Player & activePlayer) {
+		return (& activePlayer == & m_PlayerOne) ? m_PlayerTwo : m_PlayerOne;
 	}
 
-	void Game::announceResult(Player &activePlayer) {
+	void Game::announceResult(Player & activePlayer) {
 		(m_Board.isWin()) ? m_UI.announceWinner(activePlayer.getMark()) : m_UI.announceDraw();
 	}
 }

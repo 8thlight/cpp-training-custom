@@ -3,7 +3,7 @@
 #include <iostream>
 
 namespace training {
-	Board::Board(const int m_Dimension) : m_Dimension(m_Dimension) {
+	Board::Board(const int dimension) : m_Dimension(dimension) {
 		int size = m_Dimension * m_Dimension;
 		m_Marks.assign(static_cast<unsigned long>(size), _);
 	}
@@ -16,7 +16,7 @@ namespace training {
 		return isWin() || isDraw();
 	}
 
-	Board Board::withMarks(const vector<Mark> &marks) {
+	Board Board::withMarks(const vector<Mark> & marks) {
 		int thisDimension = static_cast<int>(sqrt(marks.size()));
 		Board board(thisDimension);
 		for (unsigned int i = 0; i < marks.size(); i++) {
@@ -123,8 +123,6 @@ namespace training {
 		return line;
 	}
 
-
-
 	vector<vector<int>> Board::getDiagIndices() const {
 		vector<vector<int>> allDiags;
 		allDiags.push_back(makeLeftDiag());
@@ -152,12 +150,11 @@ namespace training {
 		return line;
 	}
 
-
 	bool Board::tileOccupied(int position) const {
 		return !(m_Marks[position - 1] == _);
 	}
 
-	const int Board::getM_Dimension() const {
+	const int Board::getDimension() const {
 		return m_Dimension;
 	}
 }

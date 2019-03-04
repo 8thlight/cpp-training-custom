@@ -1,7 +1,7 @@
 #include "RandomPlayer.hpp"
 
 namespace training {
-	RandomPlayer::RandomPlayer(const Mark m_Mark) : Player(m_Mark) {
+	RandomPlayer::RandomPlayer(const Mark mark) : Player(mark) {
 	}
 
 	int RandomPlayer::getMove(const Board & board) {

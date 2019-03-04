@@ -6,7 +6,7 @@ namespace training {
 	class Board;
 
 	struct Player {
-		explicit Player(Mark m_Mark);
+		explicit Player(Mark mark);
 
 		virtual int getMove(const Board & board) = 0;
 

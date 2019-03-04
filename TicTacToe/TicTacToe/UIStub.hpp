@@ -13,13 +13,13 @@ namespace training {
 	public:
 		explicit UIStub(vector<string> mockInputs = { "" });
 
-		int getValidMove(const Board & board) override;
+		int getValidMove(const Board &) override;
 
 		void welcome() override;
 
-		void displayMove(const Board & board) override;
+		void displayMove(const Board &) override;
 
-		void announceWinner(Mark mark) override;
+		void announceWinner(Mark) override;
 
 		void announceDraw() override;
 
