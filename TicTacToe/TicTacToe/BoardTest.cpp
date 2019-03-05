@@ -3,6 +3,15 @@
 #include "Mark.hpp"
 
 namespace training {
+	Board setBoardMarks(const vector<Mark> & marks) {
+		int thisDimension = static_cast<int>(sqrt(marks.size()));
+		Board board(thisDimension);
+		for (unsigned int i = 0; i < marks.size(); i++) {
+			board.setMark(i + 1, marks[i]);
+		}
+		return board;
+	}
+
 	TEST(Board, EmptyBoardCreation) {
 		Board board(3);
 		EXPECT_FALSE(board.isGameOver());
@@ -14,7 +23,7 @@ namespace training {
 	}
 
 	TEST(Board, WithWinningColumn1) {
-		Board board = Board::withMarks({
+		Board board = setBoardMarks({
 			X, O, O,
 			X, _, _,
 			X, _, O });
@@ -22,7 +31,7 @@ namespace training {
 	}
 
 	TEST(Board, WithWinningColumn2) {
-		Board board = Board::withMarks({
+		Board board = setBoardMarks({
 			O, X, O,
 			O, X, _,
 			_, X, X });
@@ -30,7 +39,7 @@ namespace training {
 	}
 
 	TEST(Board, WithWinningColumn3) {
-		Board board = Board::withMarks({
+		Board board = setBoardMarks({
 			O, X, X,
 			O, O, X,
 			_, _, X });
@@ -38,7 +47,7 @@ namespace training {
 	}
 
 	TEST(Board, WithWinningRow1) {
-		Board board = Board::withMarks({
+		Board board = setBoardMarks({
 			X, X, X,
 			O, _, _,
 			_, O, O });
@@ -46,7 +55,7 @@ namespace training {
 	}
 
 	TEST(Board, WithWinningRow2) {
-		Board board = Board::withMarks({
+		Board board = setBoardMarks({
 			O, _, _,
 			X, X, X,
 			_, O, O });
@@ -54,7 +63,7 @@ namespace training {
 	}
 
 	TEST(Board, WithWinningRow3) {
-		Board board = Board::withMarks({ 
+		Board board = setBoardMarks({
 			X, O, O,
 			O, _, _,
 			X, X, X });
@@ -62,7 +71,7 @@ namespace training {
 	}
 
 	TEST(Board, WithWinningDiagonal1) {
-		Board board = Board::withMarks({ 
+		Board board = setBoardMarks({
 			O, X, X,
 			_, X, O,
 			X, _, O});
@@ -70,7 +79,7 @@ namespace training {
 	}
 
 	TEST(Board, WithWinningDiagonal2) {
-		Board board = Board::withMarks({
+		Board board = setBoardMarks({
 			O, X, X,
 			_, O, X,
 			X, _, O});
@@ -78,7 +87,7 @@ namespace training {
 	}
 
 	TEST(Board, EndingInDraw) {
-		Board board = Board::withMarks({ 
+		Board board = setBoardMarks({
 			X, X, O,
 			O, O, X,
 			X, O, X });
@@ -86,7 +95,7 @@ namespace training {
 	}
 
 	TEST(Board, WithWin4x4) {
-		Board board = Board::withMarks({ 
+		Board board = setBoardMarks({
 			X, X, X, X,
 			O, O, X, _,
 			O, O, X, O,
@@ -95,11 +104,12 @@ namespace training {
 	}
 
 	TEST(Board, WithDraw4x4) {
-		Board board = Board::withMarks({ 
+		Board board = setBoardMarks({ 
 			X, X, X, O,
 			O, O, X, X,
 			O, O, X, O,
 			O, X, O, X });
 		EXPECT_TRUE(board.isDraw());
 	}
+
 }

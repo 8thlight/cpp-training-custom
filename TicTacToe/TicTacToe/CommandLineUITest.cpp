@@ -27,9 +27,13 @@ namespace training {
 		istringstream input("");
 		ostringstream output;
 		CommandLineUI ui(input, output);
-		Board board = Board::withMarks({ X, _, O,
-			X, _, _,
-			O, _, _ });
+		Board board(3);
+
+		board.setMark(1, X);
+		board.setMark(3, O);
+		board.setMark(4, X);
+		board.setMark(7, O);
+
 		ui.displayMove(board);
 
 		EXPECT_TRUE(output.str() == displayMoveMessage + newline + newline + "[X] [2] [O] " + newline 

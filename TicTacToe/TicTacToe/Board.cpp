@@ -16,15 +16,6 @@ namespace training {
 		return isWin() || isDraw();
 	}
 
-	Board Board::withMarks(const vector<Mark> & marks) {
-		int thisDimension = static_cast<int>(sqrt(marks.size()));
-		Board board(thisDimension);
-		for (unsigned int i = 0; i < marks.size(); i++) {
-			board.setMark(i + 1, marks[i]);
-		}
-		return board;
-	}
-
 	bool Board::isDraw() const {
 		return find(begin(m_Marks), end(m_Marks), _) == end(m_Marks);
 	}

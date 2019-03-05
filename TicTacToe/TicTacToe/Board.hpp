@@ -18,8 +18,6 @@ namespace training {
 
         bool isGameOver() const;
 
-        static Board withMarks(const vector <Mark> &marks);
-
         bool isWin() const;
 
         bool isDraw() const;
