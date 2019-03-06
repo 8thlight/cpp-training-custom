@@ -1,6 +1,6 @@
 #include <gtest/gtest.h>
-#include "Game.cpp"
-#include "Player.cpp"
+#include "Game.hpp"
+#include "Player.hpp"
 #include "StubPlayer.hpp"
 #include "StubUI.hpp"
 
@@ -9,13 +9,13 @@ using namespace std;
 namespace training {
 
 	TEST(Game, EndingInDraw) {
-		StubUI uistub;
+		StubUI stubUI;
 		StubPlayer playerOne = StubPlayer(X);
 		StubPlayer playerTwo = StubPlayer(O);
 		playerOne.willSelectSpaces({ 1, 2, 7, 6, 9 });
 		playerTwo.willSelectSpaces({ 5, 3, 4, 8 });
 
-		Game game(playerOne, playerTwo, uistub, 3);
+		Game game(playerOne, playerTwo, stubUI, 3);
 
 		game.play();
 
@@ -23,12 +23,12 @@ namespace training {
 	}
 
 	TEST(Game, P1WinRow) {
-		StubUI uistub;
+		StubUI stubUI;
 		StubPlayer playerOne = StubPlayer(X);
 		StubPlayer playerTwo = StubPlayer(O);
 		playerOne.willSelectSpaces({ 1, 2, 3 });
 		playerTwo.willSelectSpaces({ 4, 5 });
-		Game game(playerOne, playerTwo, uistub, 3);
+		Game game(playerOne, playerTwo, stubUI, 3);
 
 		game.play();
 

@@ -37,12 +37,19 @@
     <ClInclude Include="..\TicTacToe\StubUI.hpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="..\TicTacToe\Board.cpp" />
     <ClCompile Include="..\TicTacToe\BoardTest.cpp" />
+    <ClCompile Include="..\TicTacToe\CommandLineUI.cpp" />
     <ClCompile Include="..\TicTacToe\CommandLineUITest.cpp" />
+    <ClCompile Include="..\TicTacToe\Game.cpp" />
     <ClCompile Include="..\TicTacToe\GameTest.cpp" />
+    <ClCompile Include="..\TicTacToe\HumanPlayer.cpp" />
     <ClCompile Include="..\TicTacToe\HumanPlayerTest.cpp" />
+    <ClCompile Include="..\TicTacToe\Player.cpp" />
+    <ClCompile Include="..\TicTacToe\RandomPlayer.cpp" />
     <ClCompile Include="..\TicTacToe\RandomPlayerTest.cpp" />
     <ClCompile Include="..\TicTacToe\StubPlayer.cpp" />
+    <ClCompile Include="..\TicTacToe\TicTacToe.cpp" />
     <ClCompile Include="..\TicTacToe\TicTacToeTest.cpp" />
     <ClCompile Include="..\TicTacToe\StubUI.cpp" />
   </ItemGroup>

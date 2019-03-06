@@ -1,24 +1,24 @@
 #include <gtest/gtest.h>
-#include "TicTacToe.cpp"
+#include "TicTacToe.hpp"
 #include "StubUI.hpp"
-#include "RandomPlayer.cpp"
+#include "RandomPlayer.hpp"
 
 namespace training {
 	TEST(TicTacToe, hvhGameP1Wins) {
-		StubUI uistub({ "1","1","4","2","5","3" });
-		TicTacToe ttt(uistub, 3);
+		StubUI stubUI({ "1","1","4","2","5","3" });
+		TicTacToe ttt(stubUI, 3);
 
 		ttt.start();
 
-		EXPECT_TRUE(uistub.wasWinAnnounced());
+		EXPECT_TRUE(stubUI.wasWinAnnounced());
 	}
 
 	TEST(TicTacToe, cvcGame) {
-		StubUI uistub({"4"});
-		TicTacToe ttt(uistub, 3);
+		StubUI stubUI({"4"});
+		TicTacToe ttt(stubUI, 3);
 
 		ttt.start();
 
-		EXPECT_TRUE(uistub.wasWinAnnounced()  || uistub.wasDrawAnnounced());
+		EXPECT_TRUE(stubUI.wasWinAnnounced()  || stubUI.wasDrawAnnounced());
 	}
 }

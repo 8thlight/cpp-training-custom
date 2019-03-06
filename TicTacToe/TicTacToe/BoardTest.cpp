@@ -1,5 +1,5 @@
 #include "gtest/gtest.h"
-#include "Board.cpp"
+#include "Board.hpp"
 #include "Mark.hpp"
 
 namespace training {

@@ -1,5 +1,5 @@
 #include <gtest/gtest.h>
-#include "CommandLineUI.cpp"
+#include "CommandLineUI.hpp"
 
 using namespace std;
 
