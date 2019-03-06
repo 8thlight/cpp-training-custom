@@ -1,5 +1,5 @@
 #include <gtest/gtest.h>
-#include "HumanPlayer.hpp"
+#include "HumanPlayer.cpp"
 #include "UIStub.hpp"
 #include "Board.hpp"
 #include "Mark.hpp"

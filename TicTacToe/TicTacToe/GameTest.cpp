@@ -2,7 +2,7 @@
 #include "Game.cpp"
 #include "Player.cpp"
 #include "StubPlayer.cpp"
-#include "UIStub.cpp"
+#include "UIStub.hpp"
 
 using namespace std;
 

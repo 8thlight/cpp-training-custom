@@ -33,12 +33,16 @@
   <ImportGroup Label="PropertySheets" />
   <PropertyGroup Label="UserMacros" />
   <ItemGroup>
+    <ClInclude Include="..\TicTacToe\UIStub.hpp" />
     <ClInclude Include="pch.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\TicTacToe\BoardTest.cpp" />
     <ClCompile Include="..\TicTacToe\CommandLineUITest.cpp" />
     <ClCompile Include="..\TicTacToe\GameTest.cpp" />
+    <ClCompile Include="..\TicTacToe\HumanPlayerTest.cpp" />
+    <ClCompile Include="..\TicTacToe\TicTacToeTest.cpp" />
+    <ClCompile Include="..\TicTacToe\UIStub.cpp" />
     <ClCompile Include="test.cpp" />
     <ClCompile Include="pch.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>

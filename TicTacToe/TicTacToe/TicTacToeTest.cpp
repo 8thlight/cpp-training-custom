@@ -1,6 +1,7 @@
 #include <gtest/gtest.h>
-#include "TicTacToe.hpp"
+#include "TicTacToe.cpp"
 #include "UIStub.hpp"
+#include "RandomPlayer.cpp"
 
 namespace training {
 	TEST(TicTacToe, hvhGameP1Wins) {

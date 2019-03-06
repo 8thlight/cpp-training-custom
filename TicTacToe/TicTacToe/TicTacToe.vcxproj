@@ -48,22 +48,18 @@
     <ClInclude Include="TicTacToe.hpp" />
     <ClInclude Include="CommandLineUI.hpp" />
     <ClInclude Include="UI.hpp" />
-    <ClInclude Include="UIStub.hpp" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Board.cpp" />
     <ClCompile Include="Game.cpp" />
     <ClCompile Include="HumanPlayer.cpp" />
-    <ClCompile Include="HumanPlayerTest.cpp" />
     <ClCompile Include="Main.cpp" />
     <ClCompile Include="Player.cpp" />
     <ClCompile Include="RandomPlayer.cpp" />
     <ClCompile Include="RandomPlayerTest.cpp" />
     <ClCompile Include="StubPlayer.cpp" />
     <ClCompile Include="TicTacToe.cpp" />
-    <ClCompile Include="TicTacToeTest.cpp" />
     <ClCompile Include="CommandLineUI.cpp" />
-    <ClCompile Include="UIStub.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
