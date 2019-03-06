@@ -9,9 +9,9 @@
 using namespace std;
 
 namespace training {
-    class UIStub : public UI {
+    class StubUI : public UI {
     public:
-        explicit UIStub(vector <string> mockInputs = {""});
+        explicit StubUI(vector <string> mockInputs = {""});
 
         int getValidMove(const Board &) override;
 

@@ -1,41 +1,41 @@
-#include "UIStub.hpp"
+#include "StubUI.hpp"
 
 namespace training {
-    UIStub::UIStub(vector <string> mockInputs) : m_MockInputs(mockInputs) {
+    StubUI::StubUI(vector <string> mockInputs) : m_MockInputs(mockInputs) {
         m_InputCounter = 0;
         m_WinAnnounced = false;
         m_DrawAnnounced = false;
     }
 
-    int UIStub::getValidMove(const Board &) {
+    int StubUI::getValidMove(const Board &) {
         m_InputCounter++;
         return stoi(m_MockInputs[m_InputCounter - 1]);
     }
 
-    void UIStub::welcome() {}
+    void StubUI::welcome() {}
 
-    void UIStub::displayMove(const Board &) {}
+    void StubUI::displayMove(const Board &) {}
 
-    void UIStub::announceWinner(const Mark) {
+    void StubUI::announceWinner(const Mark) {
         m_WinAnnounced = true;
     }
 
-    void UIStub::announceDraw() {
+    void StubUI::announceDraw() {
         m_DrawAnnounced = true;
     }
 
-    void UIStub::announceInvalidInput() {}
+    void StubUI::announceInvalidInput() {}
 
-    int UIStub::getValidMode() {
+    int StubUI::getValidMode() {
         m_InputCounter++;
         return stoi(m_MockInputs[m_InputCounter - 1]);
     }
 
-    bool UIStub::wasWinAnnounced() {
+    bool StubUI::wasWinAnnounced() {
         return m_WinAnnounced;
     }
 
-    bool UIStub::wasDrawAnnounced() {
+    bool StubUI::wasDrawAnnounced() {
         return m_DrawAnnounced;
     }
 }

@@ -2,14 +2,14 @@
 #include "Game.cpp"
 #include "Player.cpp"
 #include "StubPlayer.hpp"
-#include "UIStub.hpp"
+#include "StubUI.hpp"
 
 using namespace std;
 
 namespace training {
 
 	TEST(Game, EndingInDraw) {
-		UIStub uistub;
+		StubUI uistub;
 		StubPlayer playerOne = StubPlayer(X);
 		StubPlayer playerTwo = StubPlayer(O);
 		playerOne.willSelectSpaces({ 1, 2, 7, 6, 9 });
@@ -23,7 +23,7 @@ namespace training {
 	}
 
 	TEST(Game, P1WinRow) {
-		UIStub uistub;
+		StubUI uistub;
 		StubPlayer playerOne = StubPlayer(X);
 		StubPlayer playerTwo = StubPlayer(O);
 		playerOne.willSelectSpaces({ 1, 2, 3 });
