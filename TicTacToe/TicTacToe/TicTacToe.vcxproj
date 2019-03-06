@@ -44,7 +44,6 @@
     <ClInclude Include="Mode.hpp" />
     <ClInclude Include="Player.hpp" />
     <ClInclude Include="RandomPlayer.hpp" />
-    <ClInclude Include="StubPlayer.hpp" />
     <ClInclude Include="TicTacToe.hpp" />
     <ClInclude Include="CommandLineUI.hpp" />
     <ClInclude Include="UI.hpp" />
@@ -56,8 +55,6 @@
     <ClCompile Include="Main.cpp" />
     <ClCompile Include="Player.cpp" />
     <ClCompile Include="RandomPlayer.cpp" />
-    <ClCompile Include="RandomPlayerTest.cpp" />
-    <ClCompile Include="StubPlayer.cpp" />
     <ClCompile Include="TicTacToe.cpp" />
     <ClCompile Include="CommandLineUI.cpp" />
   </ItemGroup>

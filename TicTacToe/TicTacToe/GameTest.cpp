@@ -1,7 +1,7 @@
 #include <gtest/gtest.h>
 #include "Game.cpp"
 #include "Player.cpp"
-#include "StubPlayer.cpp"
+#include "StubPlayer.hpp"
 #include "UIStub.hpp"
 
 using namespace std;
