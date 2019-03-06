@@ -6,7 +6,7 @@
 
 using namespace std;
 
-typedef vector <vector<int>> doubleVector;
+typedef vector <vector<int>> twoDVector;
 
 namespace training {
     class Board {
@@ -26,31 +26,31 @@ namespace training {
 
         Mark getMark(int position) const;
 
-        const int getDimension() const;
+        int getDimension() const;
 
     private:
         const int m_Dimension;
         vector <Mark> m_Marks;
 
-        bool anyLineWin(doubleVector lines) const;
+        bool anyLineWin(const twoDVector &lines) const;
 
-        bool isLineWin(vector<int> positions) const;
+        bool isLineWin(const vector<int> &positions) const;
 
-        bool allMarksIdentical(vector<int> positions) const;
+        bool allMarksIdentical(const vector<int> &positions) const;
 
-        doubleVector getColumnIndices() const;
+        twoDVector getColumnIndices() const;
 
         vector<int> getColStartingValues() const;
 
         vector<int> makeCol(int startingValue) const;
 
-        doubleVector getRowIndices() const;
+        twoDVector getRowIndices() const;
 
         vector<int> getRowStartingValues() const;
 
         vector<int> makeRow(int startingValue) const;
 
-        doubleVector getDiagIndices() const;
+        twoDVector getDiagIndices() const;
 
         vector<int> makeLeftDiag() const;
 

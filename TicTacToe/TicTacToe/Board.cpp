@@ -30,7 +30,7 @@ namespace training {
 			anyLineWin(getDiagIndices());
 	}
 
-	bool Board::anyLineWin(doubleVector lines) const {
+	bool Board::anyLineWin(const twoDVector &lines) const {
 		for (const auto &line : lines) {
 			if (isLineWin(line)) {
 				return true;
@@ -39,11 +39,11 @@ namespace training {
 		return false;
 	}
 
-	bool Board::isLineWin(vector<int> positions) const {
+	bool Board::isLineWin(const vector<int> &positions) const {
 		return m_Marks[positions[0]] != _ && allMarksIdentical(positions);
 	}
 
-	bool Board::allMarksIdentical(vector<int> positions) const {
+	bool Board::allMarksIdentical(const vector<int> &positions) const {
 		int firstMark = m_Marks[positions[0]];
 		for (auto position : positions) {
 			if (m_Marks[position] != firstMark)
@@ -52,9 +52,9 @@ namespace training {
 		return true;
 	}
 
-	doubleVector Board::getColumnIndices() const {
+	twoDVector Board::getColumnIndices() const {
 		vector<int> colStartingValues = getColStartingValues();
-		doubleVector allCols;
+		twoDVector allCols;
 		allCols.reserve((unsigned long)m_Dimension);
 		for (auto startingValue : colStartingValues) {
 			allCols.push_back(makeCol(startingValue));
@@ -81,9 +81,9 @@ namespace training {
 		return line;
 	}
 
-	doubleVector Board::getRowIndices() const {
+	twoDVector Board::getRowIndices() const {
 		vector<int> rowStartingValues = getRowStartingValues();
-		doubleVector allRows;
+		twoDVector allRows;
 		allRows.reserve((unsigned long)m_Dimension);
 		for (auto startingValue : rowStartingValues) {
 			allRows.push_back(makeRow(startingValue));
@@ -110,7 +110,7 @@ namespace training {
 		return line;
 	}
 
-	doubleVector Board::getDiagIndices() const {
+	twoDVector Board::getDiagIndices() const {
 		vector<vector<int>> allDiags;
 		allDiags.push_back(makeLeftDiag());
 		allDiags.push_back(makeRightDiag());
@@ -141,7 +141,7 @@ namespace training {
 		return !(m_Marks[position - 1] == _);
 	}
 
-	const int Board::getDimension() const {
+	int Board::getDimension() const {
 		return m_Dimension;
 	}
 }
