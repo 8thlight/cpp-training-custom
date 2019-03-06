@@ -19,9 +19,9 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{5103f46f-2be6-49ee-a7e5-03179cb48037}</ProjectGuid>
+    <ProjectGuid>{dc02fb87-3e96-4754-bd6a-d43595a76367}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
-    <WindowsTargetPlatformVersion>10.0.16299.0</WindowsTargetPlatformVersion>
+    <WindowsTargetPlatformVersion>10.0.17763.0</WindowsTargetPlatformVersion>
     <ConfigurationType>Application</ConfigurationType>
     <PlatformToolset>v141</PlatformToolset>
     <CharacterSet>Unicode</CharacterSet>
@@ -32,49 +32,31 @@
   <ImportGroup Label="Shared" />
   <ImportGroup Label="PropertySheets" />
   <PropertyGroup Label="UserMacros" />
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <CodeAnalysisRuleSet>NativeRecommendedRules.ruleset</CodeAnalysisRuleSet>
-    <RunCodeAnalysis>true</RunCodeAnalysis>
-  </PropertyGroup>
   <ItemGroup>
-    <ClInclude Include="Board.hpp" />
-    <ClInclude Include="Game.hpp" />
-    <ClInclude Include="HumanPlayer.hpp" />
-    <ClInclude Include="Mark.hpp" />
-    <ClInclude Include="Mode.hpp" />
-    <ClInclude Include="Player.hpp" />
-    <ClInclude Include="RandomPlayer.hpp" />
-    <ClInclude Include="StubPlayer.hpp" />
-    <ClInclude Include="TicTacToe.hpp" />
-    <ClInclude Include="CommandLineUI.hpp" />
-    <ClInclude Include="UI.hpp" />
-    <ClInclude Include="UIStub.hpp" />
+    <ClInclude Include="pch.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Board.cpp" />
-    <ClCompile Include="Game.cpp" />
-    <ClCompile Include="GameTest.cpp" />
-    <ClCompile Include="HumanPlayer.cpp" />
-    <ClCompile Include="HumanPlayerTest.cpp" />
-    <ClCompile Include="Main.cpp" />
-    <ClCompile Include="Player.cpp" />
-    <ClCompile Include="RandomPlayer.cpp" />
-    <ClCompile Include="RandomPlayerTest.cpp" />
-    <ClCompile Include="StubPlayer.cpp" />
-    <ClCompile Include="TicTacToe.cpp" />
-    <ClCompile Include="TicTacToeTest.cpp" />
-    <ClCompile Include="CommandLineUI.cpp" />
-    <ClCompile Include="CommandLineUITest.cpp" />
-    <ClCompile Include="UIStub.cpp" />
+    <ClCompile Include="..\TicTacToe\BoardTest.cpp" />
+    <ClCompile Include="test.cpp" />
+    <ClCompile Include="pch.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\TicTacToe\TicTacToe.vcxproj">
+      <Project>{5103f46f-2be6-49ee-a7e5-03179cb48037}</Project>
+    </ProjectReference>
   </ItemGroup>
   <ItemDefinitionGroup />
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
     <Import Project="..\packages\Microsoft.googletest.v140.windesktop.msvcstl.static.rt-dyn.1.8.0\build\native\Microsoft.googletest.v140.windesktop.msvcstl.static.rt-dyn.targets" Condition="Exists('..\packages\Microsoft.googletest.v140.windesktop.msvcstl.static.rt-dyn.1.8.0\build\native\Microsoft.googletest.v140.windesktop.msvcstl.static.rt-dyn.targets')" />
-    <Import Project="..\packages\CppLintTask.1.5.3\build\CppLintTask.targets" Condition="Exists('..\packages\CppLintTask.1.5.3\build\CppLintTask.targets')" />
   </ImportGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
@@ -85,10 +67,7 @@
       <MinimalRebuild>true</MinimalRebuild>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
-      <WarningLevel>Level4</WarningLevel>
-      <DisableSpecificWarnings>
-      </DisableSpecificWarnings>
-      <EnablePREfast>true</EnablePREfast>
+      <WarningLevel>Level3</WarningLevel>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
@@ -148,6 +127,5 @@
       <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
     </PropertyGroup>
     <Error Condition="!Exists('..\packages\Microsoft.googletest.v140.windesktop.msvcstl.static.rt-dyn.1.8.0\build\native\Microsoft.googletest.v140.windesktop.msvcstl.static.rt-dyn.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.googletest.v140.windesktop.msvcstl.static.rt-dyn.1.8.0\build\native\Microsoft.googletest.v140.windesktop.msvcstl.static.rt-dyn.targets'))" />
-    <Error Condition="!Exists('..\packages\CppLintTask.1.5.3\build\CppLintTask.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\CppLintTask.1.5.3\build\CppLintTask.targets'))" />
   </Target>
 </Project>
