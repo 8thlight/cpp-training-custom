@@ -1,3 +1,5 @@
+Copyright 2019 <8th Light>
+
 #include <cmath>
 #include <iostream>
 #include "Board.hpp"
@@ -144,5 +146,4 @@ bool Board::tileOccupied(int position) const {
 int Board::getDimension() const {
     return m_Dimension;
 }
-// namespace training 
-}
+}  // namespace training
