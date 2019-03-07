@@ -2,8 +2,8 @@
 
 #pragma once
 
-#include <string>
 #include <windows.h>
+#include <string>
 #include <iostream>
 #include "Board.hpp"
 #include "Mode.hpp"

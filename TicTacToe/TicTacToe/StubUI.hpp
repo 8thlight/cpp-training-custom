@@ -8,8 +8,6 @@
 #include "Mark.hpp"
 #include "UI.hpp"
 
-using namespace std;
-
 namespace training {
 class StubUI : public UI {
  public:
