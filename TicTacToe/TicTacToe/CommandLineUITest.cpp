@@ -8,7 +8,8 @@ using std::ostringstream;
 
 namespace training {
     TEST(CommandLineUI, InputIsNotNumberValidation) {
-        istringstream input("asd" + newline + "1?" + newline + "" + newline + "1");
+        istringstream input("asd" + newline + "1?"
+            + newline + "" + newline + "1");
         ostringstream output;
 
         CommandLineUI ui(input, output);
@@ -66,7 +67,8 @@ namespace training {
     }
 
     TEST(CommandLineUI, getModeWhenInitiallyOutOfRange) {
-        istringstream input("0" + newline + "7" + newline + "1.1" + newline + "1");
+        istringstream input("0" + newline + "7" + newline
+            + "1.1" + newline + "1");
         ostringstream output;
         CommandLineUI ui(input, output);
 

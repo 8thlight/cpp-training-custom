@@ -6,7 +6,7 @@
 int main() {
     training::CommandLineUI clui;
     int dimension = 3;
-    training::TicTacToe ttt(clui, dimension);
+    training::TicTacToe ttt(&clui, dimension);
 
     ttt.start();
 

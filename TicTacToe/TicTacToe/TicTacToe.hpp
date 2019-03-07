@@ -17,7 +17,7 @@ using std::make_unique;
 namespace training {
     class TicTacToe {
     public:
-        explicit TicTacToe(UI &UI, int dimension);
+        explicit TicTacToe(UI *UI, int dimension);
 
         void start();
 
