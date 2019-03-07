@@ -7,16 +7,16 @@
 using namespace std;
 
 namespace training {
-    class StubPlayer : public Player {
-    public:
-        explicit StubPlayer(Mark mark);
+class StubPlayer : public Player {
+ public:
+  explicit StubPlayer(Mark mark);
 
-        int getMove(const Board &board) override;
+  int getMove(const Board &board) override;
 
-        void willSelectSpaces(vector<int> spaces);
+  void willSelectSpaces(vector<int> spaces);
 
-    private:
-        vector<int> m_SpacesToReturn;
-        int m_CurrentIndex;
-    };
+ private:
+  vector<int> m_SpacesToReturn;
+  int m_CurrentIndex;
+};
 }

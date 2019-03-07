@@ -10,16 +10,16 @@
 using namespace std;
 
 namespace training {
-    class TicTacToe {
-    public:
-        explicit TicTacToe(UI &UI, int dimension);
+class TicTacToe {
+ public:
+  explicit TicTacToe(UI &UI, int dimension);
 
-        void start();
+  void start();
 
-    private:
-        UI &m_UI;
-        int m_Dimension;
+ private:
+  UI &m_UI;
+  int m_Dimension;
 
-        array<unique_ptr<Player>, 2> makePlayers(int mode);
-    };
+  array<unique_ptr<Player>, 2> makePlayers(int mode);
+};
 }
