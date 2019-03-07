@@ -144,5 +144,5 @@ bool Board::tileOccupied(int position) const {
 int Board::getDimension() const {
     return m_Dimension;
 }
-}
 // namespace training 
+}
