@@ -40,7 +40,7 @@ Player *Game::alternate(Player *activePlayer) {
 }
 
 void Game::announceResult(Player *activePlayer) {
-    (m_Board.isWin()) ? m_UI.announceWinner(activePlayer->getMark()) 
+    (m_Board.isWin()) ? m_UI.announceWinner(activePlayer->getMark())
 		: m_UI.announceDraw();
 }
 }  // namespace training

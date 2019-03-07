@@ -4,7 +4,7 @@
 #include "TicTacToe.hpp"
 
 namespace training {
-TicTacToe::TicTacToe(UI &UI, int dimension) 
+TicTacToe::TicTacToe(UI &UI, int dimension)
 	: m_UI(UI), m_Dimension(dimension) {}
 
 void TicTacToe::start() {
