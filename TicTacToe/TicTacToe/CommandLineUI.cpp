@@ -1,3 +1,5 @@
+// Copyright 2019 < 8th Light >
+
 #include "CommandLineUI.hpp"
 
 namespace training {
@@ -18,12 +20,14 @@ void CommandLineUI::welcome() {
 }
 
 void CommandLineUI::displayMove(const Board &board) {
-    m_Output << displayMoveMessage + newline + newline + outputBoard(board) + newline;
-    this_thread::sleep_for(chrono::milliseconds(m_DelayTime));
+    m_Output << displayMoveMessage + newline + newline 
+		+ outputBoard(board) + newline;
+	Sleep(m_DelayTime);
 }
 
 void CommandLineUI::announceWinner(const Mark mark) {
-    m_Output << getOccupiedMarkAsString(mark) + winnerMessage + newline + newline;
+    m_Output << getOccupiedMarkAsString(mark) + winnerMessage 
+		+ newline + newline;
 }
 
 void CommandLineUI::announceDraw() {
@@ -84,7 +88,8 @@ string CommandLineUI::outputBoard(const Board &board) {
     int size = dimension * dimension;
     string boardRepresentation;
     for (int i = 1; i < size + 1; ++i) {
-        boardRepresentation.append("[" + getMarkAsString(board.getMark(i), i) + "] ");
+        boardRepresentation.append("[" 
+			+ getMarkAsString(board.getMark(i), i) + "] ");
         if (i % dimension == 0) {
             boardRepresentation.append(newline);
         }
@@ -103,5 +108,4 @@ string CommandLineUI::getOccupiedMarkAsString(const Mark mark) {
 void CommandLineUI::askForTile(const Board &board) {
     m_Output << outputBoard(board) + newline + askForTileMessage + newline;
 }
-}
-// namespace training
+}  // namespace training

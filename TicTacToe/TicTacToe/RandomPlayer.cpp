@@ -1,3 +1,5 @@
+// Copyright 2019 < 8th Light >
+
 #include "RandomPlayer.hpp"
 
 namespace training {
@@ -15,5 +17,4 @@ int RandomPlayer::getMove(const Board &board) {
 int RandomPlayer::generateRandInRange() {
     return rand() % 9 + 1;
 }
-}
-// namespace training
+}  // namespace training

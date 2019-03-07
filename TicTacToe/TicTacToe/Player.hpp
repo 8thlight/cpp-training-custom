@@ -1,3 +1,5 @@
+// Copyright 2019 < 8th Light >
+
 #pragma once
 
 #include "Mark.hpp"
@@ -17,5 +19,4 @@ struct Player {
  private:
   Mark m_Mark;
 };
-}
-// namespace training
+}  // namespace training

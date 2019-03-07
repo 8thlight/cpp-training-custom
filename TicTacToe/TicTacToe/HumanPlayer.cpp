@@ -1,3 +1,5 @@
+// Copyright 2019 < 8th Light >
+
 #include "HumanPlayer.hpp"
 
 namespace training {
@@ -13,5 +15,4 @@ int HumanPlayer::getMove(const Board &board) {
     }
     return tileChoice;
 }
-}
-// namespace training
+}  // namespace training

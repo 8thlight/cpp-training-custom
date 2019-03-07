@@ -1,3 +1,5 @@
+// Copyright 2019 < 8th Light >
+
 #include <gtest/gtest.h>
 #include "RandomPlayer.hpp"
 #include "Board.hpp"
@@ -12,4 +14,4 @@ namespace training {
 		EXPECT_TRUE(move <= 9);
 		EXPECT_TRUE(move >= 1);
 	}
-}
+}  // namespace training

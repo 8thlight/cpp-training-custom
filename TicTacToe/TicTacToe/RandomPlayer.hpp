@@ -1,3 +1,5 @@
+// Copyright 2019 < 8th Light >
+
 #pragma once
 
 #include <stdlib.h>
@@ -14,5 +16,4 @@ class RandomPlayer : public Player {
  private:
   int generateRandInRange();
 };
-}
-// namespace training
+}  // namespace training

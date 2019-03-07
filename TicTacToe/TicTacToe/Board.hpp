@@ -1,3 +1,5 @@
+// Copyright 2019 < 8th Light >
+
 #pragma once
 
 #include <vector>
@@ -55,5 +57,4 @@ class Board {
 
   vector<int> makeRightDiag() const;
 };
-}
-// namespace training
+}  // namespace training

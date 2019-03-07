@@ -1,3 +1,5 @@
+// Copyright 2019 < 8th Light >
+
 #include "gtest/gtest.h"
 #include "Board.hpp"
 #include "Mark.hpp"
@@ -112,4 +114,4 @@ namespace training {
 		EXPECT_TRUE(board.isDraw());
 	}
 
-}
+}  // namespace training

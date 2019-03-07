@@ -1,3 +1,5 @@
+// Copyright 2019 < 8th Light >
+
 #include <gtest/gtest.h>
 #include "TicTacToe.hpp"
 #include "StubUI.hpp"
@@ -21,4 +23,4 @@ namespace training {
 
 		EXPECT_TRUE(stubUI.wasWinAnnounced()  || stubUI.wasDrawAnnounced());
 	}
-}
+}  // namespace training

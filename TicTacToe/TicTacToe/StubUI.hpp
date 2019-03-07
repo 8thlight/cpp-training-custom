@@ -1,3 +1,5 @@
+// Copyright 2019 < 8th Light >
+
 #pragma once
 
 #include <vector>
@@ -37,4 +39,4 @@ class StubUI : public UI {
   bool m_WinAnnounced;
   bool m_DrawAnnounced;
 };
-}
+}  // namespace training

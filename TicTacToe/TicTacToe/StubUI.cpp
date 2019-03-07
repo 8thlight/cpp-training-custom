@@ -1,3 +1,5 @@
+// Copyright 2019 < 8th Light >
+
 #include "StubUI.hpp"
 
 namespace training {
@@ -38,4 +40,4 @@ bool StubUI::wasWinAnnounced() {
 bool StubUI::wasDrawAnnounced() {
     return m_DrawAnnounced;
 }
-}
+}  // namespace training

@@ -1,3 +1,5 @@
+// Copyright 2019 < 8th Light >
+
 #include <gtest/gtest.h>
 #include "HumanPlayer.hpp"
 #include "StubUI.hpp"
@@ -13,4 +15,4 @@ namespace training {
 
 		EXPECT_TRUE(player.getMove(board) == 2);
 	}
-}
+}  // namespace training

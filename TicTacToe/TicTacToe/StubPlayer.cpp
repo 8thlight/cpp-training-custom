@@ -1,3 +1,5 @@
+// Copyright 2019 < 8th Light >
+
 #include "StubPlayer.hpp"
 
 namespace training {
@@ -11,4 +13,4 @@ int StubPlayer::getMove(const Board &board) {
 void StubPlayer::willSelectSpaces(const vector<int> spaces) {
     m_SpacesToReturn = spaces;
 }
-}
+}  // namespace training

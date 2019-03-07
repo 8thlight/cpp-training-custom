@@ -1,3 +1,5 @@
+// Copyright 2019 < 8th Light >
+
 #pragma once
 
 #include <string>
@@ -35,5 +37,4 @@ struct UI {
 
   virtual int getValidMode() = 0;
 };
-}
-// namespace training
+}  // namespace training

@@ -1,10 +1,12 @@
+// Copyright 2019 < 8th Light >
+
 #include "Game.hpp"
 
 namespace training {
-Game::Game(Player &playerOne, Player &playerTwo, UI &UI, int dimension)
+Game::Game(Player &playerOne, Player &playerTwo, UI *UI, int dimension)
     : m_PlayerOne(playerOne),
       m_PlayerTwo(playerTwo),
-      m_UI(UI),
+      m_UI(*UI),
       m_Board(Board(dimension)) {}
 
 void Game::play() {
@@ -38,7 +40,7 @@ Player *Game::alternate(Player *activePlayer) {
 }
 
 void Game::announceResult(Player *activePlayer) {
-    (m_Board.isWin()) ? m_UI.announceWinner(activePlayer->getMark()) : m_UI.announceDraw();
+    (m_Board.isWin()) ? m_UI.announceWinner(activePlayer->getMark()) 
+		: m_UI.announceDraw();
 }
-}
-// namespace training
+}  // namespace training

@@ -1,3 +1,5 @@
+// Copyright 2019 < 8th Light >
+
 #pragma once
 
 #include "UI.hpp"
@@ -22,5 +24,4 @@ class TicTacToe {
 
   array<unique_ptr<Player>, 2> makePlayers(int mode);
 };
-}
-// namespace training
+}  // namespace training

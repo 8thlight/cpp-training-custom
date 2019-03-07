@@ -1,3 +1,5 @@
+// Copyright 2019 < 8th Light >
+
 #include <gtest/gtest.h>
 #include "CommandLineUI.hpp"
 
@@ -75,4 +77,4 @@ namespace training {
 
 		EXPECT_TRUE(ui.getValidMode() == 3);
 	}
-}
+}  // namespace training

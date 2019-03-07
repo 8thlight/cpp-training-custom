@@ -1,3 +1,5 @@
+// Copyright 2019 < 8th Light >
+
 #pragma once
 
 #include "Mark.hpp"
@@ -16,5 +18,4 @@ class HumanPlayer : public Player {
  private:
   UI &m_UI;
 };
-}
-// namespace training
+}  // namespace training

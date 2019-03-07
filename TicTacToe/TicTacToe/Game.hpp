@@ -1,3 +1,5 @@
+// Copyright 2019 < 8th Light >
+
 #pragma once
 
 #include "Player.hpp"
@@ -9,7 +11,7 @@ using namespace std;
 namespace training {
 class Game {
  public:
-  Game(Player &playerOne, Player &playerTwo, UI &m_UI, int dimension);
+  Game(Player &playerOne, Player &playerTwo, UI *UI, int dimension);
 
   void play();
 
@@ -29,5 +31,4 @@ class Game {
 
   Player *alternate(Player *activePlayer);
 };
-}
-// namespace training
+}  // namespace training

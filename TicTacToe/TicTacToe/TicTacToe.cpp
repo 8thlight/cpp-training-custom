@@ -1,3 +1,5 @@
+// Copyright 2019 < 8th Light >
+
 #include "TicTacToe.hpp"
 
 namespace training {
@@ -6,7 +8,7 @@ TicTacToe::TicTacToe(UI &UI, int dimension) : m_UI(UI), m_Dimension(dimension) {
 void TicTacToe::start() {
     int mode = m_UI.getValidMode();
     array<unique_ptr<Player>, 2> players = makePlayers(mode);
-    Game game(*players[0], *players[1], m_UI, m_Dimension);
+    Game game(*players[0], *players[1], &m_UI, m_Dimension);
     game.play();
 }
 
@@ -29,5 +31,4 @@ array<unique_ptr<Player>, 2> TicTacToe::makePlayers(const int mode) {
     }
     return players;
 }
-}
-// namespace training
+}  // namespace training

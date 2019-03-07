@@ -1,3 +1,5 @@
+// Copyright 2019 < 8th Light >
+
 #pragma once
 
 namespace training {
@@ -6,5 +8,4 @@ enum Mode {
 };
 
 static const int allModes[] = {hvh, hvc, cvh, cvc};
-}
-// namespace training
+}  // namespace training

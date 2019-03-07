@@ -1,15 +1,14 @@
+// Copyright 2019 < 8th Light >
+
 #pragma once
 
 #include <string>
-#include <chrono>
-#include <thread>
+#include <windows.h>
 #include <iostream>
 #include "Board.hpp"
 #include "Mode.hpp"
 #include "Mark.hpp"
 #include "UI.hpp"
-
-using namespace std;
 
 namespace training {
 class CommandLineUI : public UI {
@@ -55,5 +54,4 @@ class CommandLineUI : public UI {
 
   string outputBoard(const Board &m_Board);
 };
-}
-// namespace training
+}  // namespace training

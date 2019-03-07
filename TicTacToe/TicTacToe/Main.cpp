@@ -1,3 +1,5 @@
+// Copyright 2019 < 8th Light >
+
 #include "TicTacToe.hpp"
 #include "CommandLineUI.hpp"
 
@@ -11,5 +13,4 @@ int main() {
     ttt.start();
 
     return 0;
-}
-// namespace training
+}  // namespace training

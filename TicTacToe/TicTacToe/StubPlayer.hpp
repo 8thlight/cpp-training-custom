@@ -1,3 +1,5 @@
+// Copyright 2019 < 8th Light >
+
 #pragma once
 
 #include "Player.hpp"
@@ -19,4 +21,4 @@ class StubPlayer : public Player {
   vector<int> m_SpacesToReturn;
   int m_CurrentIndex;
 };
-}
+}  // namespace training
