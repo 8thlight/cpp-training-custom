@@ -1,4 +1,4 @@
-Copyright 2019 <8th Light>
+// Copyright 2019 < 8th Light >
 
 #include <cmath>
 #include <iostream>
