@@ -389,3 +389,6 @@ Debug
 Packages
 */bin/
 *.o
+
+*/.idea/*
+cmake-build-debug
