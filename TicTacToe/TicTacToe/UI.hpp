@@ -24,19 +24,19 @@ static const char drawMessage[] = "It was a draw...";
 static const char invalidInputMessage[] = "That input was not valid...";
 
 namespace training {
-struct UI {
-  virtual int getValidMove(const Board &board) = 0;
+    struct UI {
+        virtual int getValidMove(const Board &board) = 0;
 
-  virtual void welcome() = 0;
+        virtual void welcome() = 0;
 
-  virtual void displayMove(const Board &board) = 0;
+        virtual void displayMove(const Board &board) = 0;
 
-  virtual void announceWinner(Mark mark) = 0;
+        virtual void announceWinner(Mark mark) = 0;
 
-  virtual void announceDraw() = 0;
+        virtual void announceDraw() = 0;
 
-  virtual void announceInvalidInput() = 0;
+        virtual void announceInvalidInput() = 0;
 
-  virtual int getValidMode() = 0;
-};
+        virtual int getValidMode() = 0;
+    };
 }  // namespace training

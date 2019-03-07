@@ -6,12 +6,12 @@
 #include "Mark.hpp"
 
 namespace training {
-	TEST(RandomPlayer, withinRange) {
-		RandomPlayer comp(X);
-		Board board(3);
-		int move = comp.getMove(board);
+    TEST(RandomPlayer, withinRange) {
+        RandomPlayer comp(X);
+        Board board(3);
+        int move = comp.getMove(board);
 
-		EXPECT_TRUE(move <= 9);
-		EXPECT_TRUE(move >= 1);
-	}
+        EXPECT_TRUE(move <= 9);
+        EXPECT_TRUE(move >= 1);
+    }
 }  // namespace training

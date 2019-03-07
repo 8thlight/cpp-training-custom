@@ -3,18 +3,18 @@
 #include "RandomPlayer.hpp"
 
 namespace training {
-RandomPlayer::RandomPlayer(const Mark mark) : Player(mark) {
-}
-
-int RandomPlayer::getMove(const Board &board) {
-    int tileChoice = generateRandInRange();
-    while (board.tileOccupied(tileChoice)) {
-        tileChoice = generateRandInRange();
+    RandomPlayer::RandomPlayer(const Mark mark) : Player(mark) {
     }
-    return tileChoice;
-}
 
-int RandomPlayer::generateRandInRange() {
-    return rand() % 9 + 1;
-}
+    int RandomPlayer::getMove(const Board &board) {
+        int tileChoice = generateRandInRange();
+        while (board.tileOccupied(tileChoice)) {
+            tileChoice = generateRandInRange();
+        }
+        return tileChoice;
+    }
+
+    int RandomPlayer::generateRandInRange() {
+        return rand() % 9 + 1;
+    }
 }  // namespace training

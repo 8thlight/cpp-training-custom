@@ -7,26 +7,26 @@
 #include "UI.hpp"
 
 namespace training {
-class Game {
- public:
-  Game(Player &playerOne, Player &playerTwo, UI *UI, int dimension);
+    class Game {
+    public:
+        Game(Player &playerOne, Player &playerTwo, UI *UI, int dimension);
 
-  void play();
+        void play();
 
-  bool isGameOver();
+        bool isGameOver();
 
- private:
-  Board m_Board;
-  Player &m_PlayerOne;
-  Player &m_PlayerTwo;
-  UI &m_UI;
+    private:
+        Board m_Board;
+        Player &m_PlayerOne;
+        Player &m_PlayerTwo;
+        UI &m_UI;
 
-  void playAllTurns(Player *activePlayer);
+        void playAllTurns(Player *activePlayer);
 
-  void playTurn(Player *activePlayer);
+        void playTurn(Player *activePlayer);
 
-  void announceResult(Player *activePlayer);
+        void announceResult(Player *activePlayer);
 
-  Player *alternate(Player *activePlayer);
-};
+        Player *alternate(Player *activePlayer);
+    };
 }  // namespace training

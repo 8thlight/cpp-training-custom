@@ -7,13 +7,13 @@
 #include "Board.hpp"
 
 namespace training {
-class RandomPlayer : public Player {
- public:
-  explicit RandomPlayer(Mark mark);
+    class RandomPlayer : public Player {
+    public:
+        explicit RandomPlayer(Mark mark);
 
-  int getMove(const Board &board) override;
+        int getMove(const Board &board) override;
 
- private:
-  int generateRandInRange();
-};
+    private:
+        int generateRandInRange();
+    };
 }  // namespace training
