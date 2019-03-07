@@ -10,11 +10,15 @@
 #include "Mark.hpp"
 #include "UI.hpp"
 
+using std::istream;
+using std::ostream;
+using std::to_string;
+
 namespace training {
 class CommandLineUI : public UI {
  public:
-  explicit CommandLineUI(istream &input = cin,
-                         ostream &output = cout,
+  explicit CommandLineUI(istream &input = std::cin,
+                         ostream &output = std::cout,
                          int delayTime = 1500);
 
   int getValidMove(const Board &board) override;

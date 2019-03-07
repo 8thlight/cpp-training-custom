@@ -3,12 +3,10 @@
 #include "TicTacToe.hpp"
 #include "CommandLineUI.hpp"
 
-using namespace training;
-
 int main() {
-    CommandLineUI clui;
+    training::CommandLineUI clui;
     int dimension = 3;
-    TicTacToe ttt(clui, dimension);
+    training::TicTacToe ttt(clui, dimension);
 
     ttt.start();
 

@@ -6,20 +6,20 @@
 #include "Board.hpp"
 #include "Mark.hpp"
 
-using namespace std;
+using std::string;
 
 static const string newline = "\n";
-static const string XString = "X";
-static const string OString = "O";
-static const string welcomeMessage = "Hi! Welcome to Tic Tac Toe";
-static const string askForModeMessage = "Please enter one of the following numbers to pick the game mode:"
-    + newline + "1 - human vs human" + newline + "2 - human vs computer" + newline +
+static const char XString[] = "X";
+static const char OString[] = "O";
+static const char welcomeMessage[] = "Hi! Welcome to Tic Tac Toe";
+static const string askForModeMessage = "Please enter one of the following numbers to pick the game mode:" 
++ newline + "1 - human vs human" + newline + "2 - human vs computer" + newline +
     "3 - computer vs human" + newline + "4 - computer vs computer";
-static const string askForTileMessage = "Please pick a tile";
-static const string displayMoveMessage = "Here's the move: ";
-static const string winnerMessage = " is the winner!";
-static const string drawMessage = "It was a draw...";
-static const string invalidInputMessage = "That input was not valid...";
+static const char askForTileMessage[] = "Please pick a tile";
+static const char displayMoveMessage[] = "Here's the move: ";
+static const char winnerMessage[] = " is the winner!";
+static const char drawMessage[] = "It was a draw...";
+static const char invalidInputMessage[] = "That input was not valid...";
 
 namespace training {
 struct UI {

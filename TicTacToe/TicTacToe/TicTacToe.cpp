@@ -1,9 +1,11 @@
 // Copyright 2019 < 8th Light >
 
+#include <memory>
 #include "TicTacToe.hpp"
 
 namespace training {
-TicTacToe::TicTacToe(UI &UI, int dimension) : m_UI(UI), m_Dimension(dimension) {}
+TicTacToe::TicTacToe(UI &UI, int dimension) 
+	: m_UI(UI), m_Dimension(dimension) {}
 
 void TicTacToe::start() {
     int mode = m_UI.getValidMode();

@@ -2,11 +2,11 @@
 
 #pragma once
 
+#include <vector>
 #include "Player.hpp"
 #include "Mark.hpp"
-#include <vector>
 
-using namespace std;
+using std::vector;
 
 namespace training {
 class StubPlayer : public Player {

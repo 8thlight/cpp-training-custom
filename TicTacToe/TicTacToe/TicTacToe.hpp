@@ -2,6 +2,7 @@
 
 #pragma once
 
+#include <memory>
 #include "UI.hpp"
 #include "CommandLineUI.hpp"
 #include "Player.hpp"
@@ -9,7 +10,9 @@
 #include "Game.hpp"
 #include "RandomPlayer.hpp"
 
-using namespace std;
+using std::array;
+using std::unique_ptr;
+using std::make_unique;
 
 namespace training {
 class TicTacToe {

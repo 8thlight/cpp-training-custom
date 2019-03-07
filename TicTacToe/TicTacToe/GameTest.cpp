@@ -6,8 +6,6 @@
 #include "StubPlayer.hpp"
 #include "StubUI.hpp"
 
-using namespace std;
-
 namespace training {
 
 	TEST(Game, EndingInDraw) {
