@@ -5,3 +5,4 @@ enum Mark {
   X, O, _
 };
 }
+// namespace training

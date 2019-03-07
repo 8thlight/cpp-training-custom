@@ -30,3 +30,4 @@ array<unique_ptr<Player>, 2> TicTacToe::makePlayers(const int mode) {
     return players;
 }
 }
+// namespace training

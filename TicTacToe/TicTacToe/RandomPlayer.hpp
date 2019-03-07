@@ -15,3 +15,4 @@ class RandomPlayer : public Player {
   int generateRandInRange();
 };
 }
+// namespace training

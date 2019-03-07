@@ -30,3 +30,4 @@ class Game {
   Player *alternate(Player *activePlayer);
 };
 }
+// namespace training

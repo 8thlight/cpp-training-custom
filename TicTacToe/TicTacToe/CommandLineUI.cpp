@@ -104,3 +104,4 @@ void CommandLineUI::askForTile(const Board &board) {
     m_Output << outputBoard(board) + newline + askForTileMessage + newline;
 }
 }
+// namespace training

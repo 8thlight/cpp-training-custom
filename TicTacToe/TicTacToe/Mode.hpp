@@ -7,3 +7,4 @@ enum Mode {
 
 static const int allModes[] = {hvh, hvc, cvh, cvc};
 }
+// namespace training

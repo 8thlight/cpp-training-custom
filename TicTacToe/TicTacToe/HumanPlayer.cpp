@@ -14,3 +14,4 @@ int HumanPlayer::getMove(const Board &board) {
     return tileChoice;
 }
 }
+// namespace training

@@ -17,3 +17,4 @@ class HumanPlayer : public Player {
   UI &m_UI;
 };
 }
+// namespace training

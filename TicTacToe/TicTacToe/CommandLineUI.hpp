@@ -56,3 +56,4 @@ class CommandLineUI : public UI {
   string outputBoard(const Board &m_Board);
 };
 }
+// namespace training

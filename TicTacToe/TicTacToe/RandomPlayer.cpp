@@ -16,3 +16,4 @@ int RandomPlayer::generateRandInRange() {
     return rand() % 9 + 1;
 }
 }
+// namespace training

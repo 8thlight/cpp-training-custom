@@ -1,16 +1,15 @@
 #pragma once
 
-#include "Mark.hpp"
 #include <vector>
 #include <array>
+#include "Mark.hpp"
 
-using namespace std;
+using std::vector;
 
-typedef vector <vector<int>> twoDVector;
+typedef std::vector <std::vector<int>> twoDVector;
 
 namespace training {
 class Board {
-
  public:
   explicit Board(int dimension);
 
@@ -57,3 +56,4 @@ class Board {
   vector<int> makeRightDiag() const;
 };
 }
+// namespace training

@@ -8,3 +8,4 @@ Mark Player::getMark() {
     return m_Mark;
 }
 }
+// namespace training

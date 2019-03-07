@@ -36,3 +36,4 @@ struct UI {
   virtual int getValidMode() = 0;
 };
 }
+// namespace training

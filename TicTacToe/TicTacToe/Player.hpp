@@ -18,3 +18,4 @@ struct Player {
   Mark m_Mark;
 };
 }
+// namespace training
