@@ -15,14 +15,14 @@ void TicTacToe::start() {
 array<unique_ptr<Player>, 2> TicTacToe::makePlayers(const int mode) {
     array<unique_ptr<Player>, 2> players{};
     switch (mode - 1) {
-        case hvh:players[0] = make_unique<HumanPlayer>(X, m_UI);
-            players[1] = make_unique<HumanPlayer>(O, m_UI);
+        case hvh:players[0] = make_unique<HumanPlayer>(X, &m_UI);
+            players[1] = make_unique<HumanPlayer>(O, &m_UI);
             break;
-        case hvc:players[0] = make_unique<HumanPlayer>(X, m_UI);
+        case hvc:players[0] = make_unique<HumanPlayer>(X, &m_UI);
             players[1] = make_unique<RandomPlayer>(O);
             break;
         case cvh:players[0] = make_unique<RandomPlayer>(X);
-            players[1] = make_unique<HumanPlayer>(O, m_UI);
+            players[1] = make_unique<HumanPlayer>(O, &m_UI);
             break;
         case cvc:players[0] = make_unique<RandomPlayer>(X);
             players[1] = make_unique<RandomPlayer>(O);

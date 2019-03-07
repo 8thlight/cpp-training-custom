@@ -6,8 +6,6 @@
 #include "Board.hpp"
 #include "UI.hpp"
 
-using namespace std;
-
 namespace training {
 class Game {
  public:

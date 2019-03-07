@@ -3,8 +3,8 @@
 #include "HumanPlayer.hpp"
 
 namespace training {
-HumanPlayer::HumanPlayer(const Mark mark, UI &UI)
-    : Player(mark), m_UI(UI) {
+HumanPlayer::HumanPlayer(const Mark mark, UI *UI)
+    : Player(mark), m_UI(*UI) {
 }
 
 int HumanPlayer::getMove(const Board &board) {
