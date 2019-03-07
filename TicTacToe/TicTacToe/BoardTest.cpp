@@ -106,7 +106,7 @@ namespace training {
 	}
 
 	TEST(Board, WithDraw4x4) {
-		Board board = setBoardMarks({ 
+		Board board = setBoardMarks({
 			X, X, X, O,
 			O, O, X, X,
 			O, O, X, O,

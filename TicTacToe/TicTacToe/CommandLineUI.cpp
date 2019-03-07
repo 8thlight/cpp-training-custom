@@ -20,13 +20,13 @@ void CommandLineUI::welcome() {
 }
 
 void CommandLineUI::displayMove(const Board &board) {
-    m_Output << displayMoveMessage + newline + newline 
+    m_Output << displayMoveMessage + newline + newline
 		+ outputBoard(board) + newline;
 	Sleep(m_DelayTime);
 }
 
 void CommandLineUI::announceWinner(const Mark mark) {
-    m_Output << getOccupiedMarkAsString(mark) + winnerMessage 
+    m_Output << getOccupiedMarkAsString(mark) + winnerMessage
 		+ newline + newline;
 }
 
@@ -88,7 +88,7 @@ string CommandLineUI::outputBoard(const Board &board) {
     int size = dimension * dimension;
     string boardRepresentation;
     for (int i = 1; i < size + 1; ++i) {
-        boardRepresentation.append("[" 
+        boardRepresentation.append("["
 			+ getMarkAsString(board.getMark(i), i) + "] ");
         if (i % dimension == 0) {
             boardRepresentation.append(newline);

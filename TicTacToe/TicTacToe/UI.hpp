@@ -12,9 +12,11 @@ static const string newline = "\n";
 static const char XString[] = "X";
 static const char OString[] = "O";
 static const char welcomeMessage[] = "Hi! Welcome to Tic Tac Toe";
-static const string askForModeMessage = "Please enter one of the following numbers to pick the game mode:" 
-+ newline + "1 - human vs human" + newline + "2 - human vs computer" + newline +
-    "3 - computer vs human" + newline + "4 - computer vs computer";
+static const string askForModeMessage =
+"Please enter one of the following numbers to pick the game mode:"
++ newline + "1 - human vs human" + newline +
+"2 - human vs computer" + newline +
+"3 - computer vs human" + newline + "4 - computer vs computer";
 static const char askForTileMessage[] = "Please pick a tile";
 static const char displayMoveMessage[] = "Here's the move: ";
 static const char winnerMessage[] = " is the winner!";

@@ -3,7 +3,8 @@
 #include <gtest/gtest.h>
 #include "CommandLineUI.hpp"
 
-using namespace std;
+using std::istringstream;
+using std::ostringstream;
 
 namespace training {
 	TEST(CommandLineUI, InputIsNotNumberValidation) {
@@ -17,7 +18,8 @@ namespace training {
 	}
 
 	TEST(CommandLineUI, InputIsNotInRangeValidation) {
-		istringstream input("10" + newline + "0" + newline + "0.1" + newline + "1.0" + newline + "5");
+		istringstream input("10" + newline + "0" + newline
+			+ "0.1" + newline + "1.0" + newline + "5");
 		ostringstream output;
 		CommandLineUI ui(input, output);
 		Board board(3);
@@ -38,8 +40,9 @@ namespace training {
 
 		ui.displayMove(board);
 
-		EXPECT_TRUE(output.str() == displayMoveMessage + newline + newline + "[X] [2] [O] " + newline 
-			+ "[X] [5] [6] " + newline + "[O] [8] [9] " + newline + newline);
+		EXPECT_TRUE(output.str() == displayMoveMessage + newline
+			+ newline + "[X] [2] [O] " + newline + "[X] [5] [6] "
+			+ newline + "[O] [8] [9] " + newline + newline);
 	}
 
 	TEST(CommandLineUI, P1WinMessage) {
