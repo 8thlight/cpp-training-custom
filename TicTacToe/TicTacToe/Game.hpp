@@ -9,7 +9,9 @@
 namespace training {
     class Game {
     public:
-        Game(Player & const playerOne, Player & const playerTwo, UI & const UI, int const dimension);
+        Game(Player & const playerOne,
+            Player & const playerTwo,
+            UI & const UI, int const dimension);
 
         void play();
 

@@ -24,8 +24,7 @@ namespace training {
         playTurn(activePlayer);
         if (isGameOver()) {
             announceResult(activePlayer);
-        }
-        else {
+        } else {
             Player *nextPlayer = alternate(activePlayer);
             playAllTurns(nextPlayer);
         }
