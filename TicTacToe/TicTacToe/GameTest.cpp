@@ -15,7 +15,7 @@ namespace training {
         playerOne.willSelectSpaces({ 1, 2, 7, 6, 9 });
         playerTwo.willSelectSpaces({ 5, 3, 4, 8 });
 
-        Game game(playerOne, playerTwo, &stubUI, 3);
+        Game game(playerOne, playerTwo, stubUI, 3);
 
         game.play();
 
@@ -28,7 +28,7 @@ namespace training {
         StubPlayer playerTwo = StubPlayer(O);
         playerOne.willSelectSpaces({ 1, 2, 3 });
         playerTwo.willSelectSpaces({ 4, 5 });
-        Game game(playerOne, playerTwo, &stubUI, 3);
+        Game game(playerOne, playerTwo, stubUI, 3);
 
         game.play();
 

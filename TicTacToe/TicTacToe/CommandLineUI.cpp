@@ -121,7 +121,7 @@ namespace training {
     void CommandLineUI::askForTile(const Board &board) {
         m_Output << outputBoard(board);
         m_Output << NEWLINE;
-        askForTileMessage;
+        m_Output << askForTileMessage;
         m_Output << NEWLINE;
     }
 }  // namespace training

@@ -17,12 +17,12 @@ using std::make_unique;
 namespace training {
     class TicTacToe {
     public:
-        explicit TicTacToe(UI *UI, int dimension);
+        explicit TicTacToe(UI & const UI, int dimension);
 
         void start();
 
     private:
-        UI &m_UI;
+        UI & const m_UI;
         int m_Dimension;
 
         array<unique_ptr<Player>, 2> makePlayers(int mode);

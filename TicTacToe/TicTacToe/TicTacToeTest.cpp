@@ -8,7 +8,7 @@
 namespace training {
     TEST(TicTacToe, hvhGameP1Wins) {
         StubUI stubUI({ "1", "1", "4", "2", "5", "3" });
-        TicTacToe ttt(&stubUI, 3);
+        TicTacToe ttt(stubUI, 3);
 
         ttt.start();
 
@@ -17,7 +17,7 @@ namespace training {
 
     TEST(TicTacToe, cvcGame) {
         StubUI stubUI({ "4" });
-        TicTacToe ttt(&stubUI, 3);
+        TicTacToe ttt(stubUI, 3);
 
         ttt.start();
 
