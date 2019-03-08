@@ -16,26 +16,37 @@ namespace training {
     }
 
     void CommandLineUI::welcome() {
-        m_Output << welcomeMessage + newline + newline;
+        m_Output << welcomeMessage;
+        m_Output << NEWLINE;
+        m_Output << NEWLINE;
     }
 
     void CommandLineUI::displayMove(const Board &board) {
-        m_Output << displayMoveMessage + newline + newline
-            + outputBoard(board) + newline;
+        m_Output << displayMoveMessage;
+        m_Output << NEWLINE;
+        m_Output << NEWLINE;
+        m_Output << outputBoard(board);
+        m_Output << NEWLINE;
         Sleep(m_DelayTime);
     }
 
     void CommandLineUI::announceWinner(const Mark mark) {
-        m_Output << getOccupiedMarkAsString(mark) + winnerMessage
-            + newline + newline;
+        m_Output << getOccupiedMarkAsString(mark);
+        m_Output << winnerMessage;
+        m_Output << NEWLINE;
+        m_Output << NEWLINE;
     }
 
     void CommandLineUI::announceDraw() {
-        m_Output << drawMessage + newline + newline;
+        m_Output << drawMessage;
+        m_Output << NEWLINE;
+        m_Output << NEWLINE;
     }
 
     void CommandLineUI::announceInvalidInput() {
-        m_Output << invalidInputMessage + newline + newline;
+        m_Output << invalidInputMessage;
+        m_Output << NEWLINE;
+        m_Output << NEWLINE;
     }
 
     int CommandLineUI::getValidMode() {
@@ -57,7 +68,9 @@ namespace training {
     }
 
     string CommandLineUI::getModeInput() {
-        m_Output << askForModeMessage + newline + newline;
+        m_Output << askForModeMessage;
+        m_Output << NEWLINE;
+        m_Output << NEWLINE;
         return getInput();
     }
 
@@ -91,7 +104,7 @@ namespace training {
             boardRepresentation.append("["
                 + getMarkAsString(board.getMark(i), i) + "] ");
             if (i % dimension == 0) {
-                boardRepresentation.append(newline);
+                boardRepresentation.append(NEWLINE);
             }
         }
         return boardRepresentation;
@@ -106,6 +119,9 @@ namespace training {
     }
 
     void CommandLineUI::askForTile(const Board &board) {
-        m_Output << outputBoard(board) + newline + askForTileMessage + newline;
+        m_Output << outputBoard(board);
+        m_Output << NEWLINE;
+        askForTileMessage;
+        m_Output << NEWLINE;
     }
 }  // namespace training

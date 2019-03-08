@@ -3,7 +3,7 @@
 #include "Game.hpp"
 
 namespace training {
-    Game::Game(Player &playerOne, Player &playerTwo, UI *UI, int dimension)
+    Game::Game(Player & const playerOne, Player & const playerTwo, UI *UI, int dimension)
         : m_PlayerOne(playerOne),
         m_PlayerTwo(playerTwo),
         m_UI(*UI),

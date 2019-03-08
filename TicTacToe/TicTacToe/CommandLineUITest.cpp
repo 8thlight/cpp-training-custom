@@ -8,8 +8,8 @@ using std::ostringstream;
 
 namespace training {
     TEST(CommandLineUI, InputIsNotNumberValidation) {
-        istringstream input("asd" + newline + "1?"
-            + newline + "" + newline + "1");
+        istringstream input("asd" NEWLINE "1?" 
+            NEWLINE "" NEWLINE "1");
         ostringstream output;
 
         CommandLineUI ui(input, output);
@@ -19,8 +19,8 @@ namespace training {
     }
 
     TEST(CommandLineUI, InputIsNotInRangeValidation) {
-        istringstream input("10" + newline + "0" + newline
-            + "0.1" + newline + "1.0" + newline + "5");
+        istringstream input("10" NEWLINE "0" NEWLINE
+            "0.1" NEWLINE "1.0" NEWLINE "5");
         ostringstream output;
         CommandLineUI ui(input, output);
         Board board(3);
@@ -41,9 +41,12 @@ namespace training {
 
         ui.displayMove(board);
 
-        EXPECT_TRUE(output.str() == displayMoveMessage + newline
-            + newline + "[X] [2] [O] " + newline + "[X] [5] [6] "
-            + newline + "[O] [8] [9] " + newline + newline);
+        string expected = displayMoveMessage;
+        expected.append(NEWLINE NEWLINE "[X] [2] [O] "
+            NEWLINE "[X] [5] [6] " NEWLINE "[O] [8] [9] "
+            NEWLINE NEWLINE);
+        
+            EXPECT_TRUE(output.str() == expected);
     }
 
     TEST(CommandLineUI, P1WinMessage) {
@@ -53,7 +56,7 @@ namespace training {
 
         ui.announceWinner(X);
 
-        EXPECT_TRUE(output.str() == "X is the winner!" + newline + newline);
+        EXPECT_TRUE(output.str() == "X is the winner!" NEWLINE NEWLINE);
     }
 
     TEST(CommandLineUI, P2WinMessage) {
@@ -63,12 +66,11 @@ namespace training {
 
         ui.announceWinner(O);
 
-        EXPECT_TRUE(output.str() == "O is the winner!" + newline + newline);
+        EXPECT_TRUE(output.str() == "O is the winner!" NEWLINE NEWLINE);
     }
 
     TEST(CommandLineUI, getModeWhenInitiallyOutOfRange) {
-        istringstream input("0" + newline + "7" + newline
-            + "1.1" + newline + "1");
+        istringstream input("0" NEWLINE "7" NEWLINE "1.1" NEWLINE "1");
         ostringstream output;
         CommandLineUI ui(input, output);
 
@@ -76,7 +78,7 @@ namespace training {
     }
 
     TEST(CommandLineUI, getModeWhenInitiallyNotNumber) {
-        istringstream input("1a" + newline + "?3" + newline + "3");
+        istringstream input("1a" NEWLINE "?3" NEWLINE "3");
         ostringstream output;
         CommandLineUI ui(input, output);
 
