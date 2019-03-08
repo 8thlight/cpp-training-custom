@@ -3,7 +3,8 @@
 #include "Game.hpp"
 
 namespace training {
-    Game::Game(Player & const playerOne, Player & const playerTwo, UI & const UI, int const dimension)
+    Game::Game(Player & const playerOne, Player & const playerTwo,
+        UI & const UI, int const dimension)
         : m_PlayerOne(playerOne),
         m_PlayerTwo(playerTwo),
         m_UI(UI),
@@ -23,7 +24,8 @@ namespace training {
         playTurn(activePlayer);
         if (isGameOver()) {
             announceResult(activePlayer);
-        } else {
+        }
+        else {
             Player *nextPlayer = alternate(activePlayer);
             playAllTurns(nextPlayer);
         }

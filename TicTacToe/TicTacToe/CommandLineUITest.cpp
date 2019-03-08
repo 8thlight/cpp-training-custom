@@ -8,7 +8,7 @@ using std::ostringstream;
 
 namespace training {
     TEST(CommandLineUI, InputIsNotNumberValidation) {
-        istringstream input("asd" NEWLINE "1?" 
+        istringstream input("asd" NEWLINE "1?"
             NEWLINE "" NEWLINE "1");
         ostringstream output;
 
@@ -45,8 +45,8 @@ namespace training {
         expected.append(NEWLINE NEWLINE "[X] [2] [O] "
             NEWLINE "[X] [5] [6] " NEWLINE "[O] [8] [9] "
             NEWLINE NEWLINE);
-        
-            EXPECT_TRUE(output.str() == expected);
+
+        EXPECT_TRUE(output.str() == expected);
     }
 
     TEST(CommandLineUI, P1WinMessage) {
