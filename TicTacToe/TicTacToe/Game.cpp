@@ -4,7 +4,7 @@
 
 namespace training {
     Game::Game(Player & const playerOne, Player & const playerTwo,
-        UI & const UI, int const dimension)
+        UI & const UI, const int dimension)
         : m_PlayerOne(playerOne),
         m_PlayerTwo(playerTwo),
         m_UI(UI),

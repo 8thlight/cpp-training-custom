@@ -13,7 +13,7 @@ typedef std::vector <std::vector<int>> twoDVector;
 namespace training {
     class Board {
     public:
-        explicit Board(int dimension);
+        explicit Board(const int dimension);
 
         void setMark(int position, Mark mark);
 

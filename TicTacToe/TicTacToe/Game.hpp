@@ -11,7 +11,7 @@ namespace training {
     public:
         Game(Player & const playerOne,
             Player & const playerTwo,
-            UI & const UI, int const dimension);
+            UI & const UI, const int dimension);
 
         void play();
 
