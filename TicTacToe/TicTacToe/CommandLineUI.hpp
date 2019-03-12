@@ -2,9 +2,9 @@
 
 #pragma once
 
+#include <windows.h>
 #include <iostream>
 #include <string>
-#include <windows.h>
 #include "Board.hpp"
 #include "Mark.hpp"
 #include "Mode.hpp"
