@@ -1,8 +1,8 @@
 // Copyright 2019 < 8th Light >
 
 #include "gtest/gtest.h"
-#include "Board.hpp"
-#include "Mark.hpp"
+#include "../TicTacToe/Board.hpp"
+#include "../TicTacToe/Mark.hpp"
 
 namespace training {
     Board setBoardMarks(const vector<Mark> & marks) {

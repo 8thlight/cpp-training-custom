@@ -38,7 +38,6 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\TicTacToe\Board.cpp" />
-    <ClCompile Include="..\TicTacToe\BoardTest.cpp" />
     <ClCompile Include="..\TicTacToe\CommandLineUI.cpp" />
     <ClCompile Include="..\TicTacToe\CommandLineUITest.cpp" />
     <ClCompile Include="..\TicTacToe\Game.cpp" />
@@ -52,6 +51,7 @@
     <ClCompile Include="..\TicTacToe\TicTacToe.cpp" />
     <ClCompile Include="..\TicTacToe\TicTacToeTest.cpp" />
     <ClCompile Include="..\TicTacToe\StubUI.cpp" />
+    <ClCompile Include="BoardTest.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
