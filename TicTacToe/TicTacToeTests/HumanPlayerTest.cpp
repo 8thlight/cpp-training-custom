@@ -1,10 +1,10 @@
 // Copyright 2019 < 8th Light >
 
 #include <gtest/gtest.h>
-#include "HumanPlayer.hpp"
-#include "StubUI.hpp"
-#include "Board.hpp"
-#include "Mark.hpp"
+#include "../TicTacToe/HumanPlayer.hpp"
+#include "../TicTacToe/StubUI.hpp"
+#include "../TicTacToe/Board.hpp"
+#include "../TicTacToe/Mark.hpp"
 
 namespace training {
     TEST(HumanPlayer, inputTileOccupiedValidation) {

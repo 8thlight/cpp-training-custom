@@ -1,9 +1,9 @@
 // Copyright 2019 < 8th Light >
 
 #include <gtest/gtest.h>
-#include "RandomPlayer.hpp"
-#include "Board.hpp"
-#include "Mark.hpp"
+#include "../TicTacToe/RandomPlayer.hpp"
+#include "../TicTacToe/Board.hpp"
+#include "../TicTacToe/Mark.hpp"
 
 namespace training {
     TEST(RandomPlayer, withinRange) {

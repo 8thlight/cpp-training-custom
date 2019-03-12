@@ -1,10 +1,10 @@
 // Copyright 2019 < 8th Light >
 
 #include <gtest/gtest.h>
-#include "Game.hpp"
-#include "Player.hpp"
+#include "../TicTacToe/Game.hpp"
+#include "../TicTacToe/Player.hpp"
 #include "StubPlayer.hpp"
-#include "StubUI.hpp"
+#include "../TicTacToe/StubUI.hpp"
 
 namespace training {
 

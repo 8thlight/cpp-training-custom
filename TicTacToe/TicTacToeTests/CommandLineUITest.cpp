@@ -1,7 +1,7 @@
 // Copyright 2019 < 8th Light >
 
 #include <gtest/gtest.h>
-#include "CommandLineUI.hpp"
+#include "../TicTacToe/CommandLineUI.hpp"
 
 using std::istringstream;
 using std::ostringstream;
