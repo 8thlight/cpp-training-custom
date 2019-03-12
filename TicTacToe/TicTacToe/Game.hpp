@@ -2,8 +2,8 @@
 
 #pragma once
 
-#include "Player.hpp"
 #include "Board.hpp"
+#include "Player.hpp"
 #include "UI.hpp"
 
 namespace training {

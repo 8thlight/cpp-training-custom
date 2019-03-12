@@ -3,12 +3,13 @@
 #pragma once
 
 #include <memory>
-#include "UI.hpp"
+
 #include "CommandLineUI.hpp"
-#include "Player.hpp"
-#include "HumanPlayer.hpp"
 #include "Game.hpp"
+#include "HumanPlayer.hpp"
+#include "Player.hpp"
 #include "RandomPlayer.hpp"
+#include "UI.hpp"
 
 using std::array;
 using std::unique_ptr;

@@ -1,9 +1,9 @@
 // Copyright 2019 < 8th Light >
 
 #include <gtest/gtest.h>
-#include "TicTacToe.hpp"
+#include "../TicTacToe/TicTacToe.hpp"
+#include "../TicTacToe/RandomPlayer.hpp"
 #include "StubUI.hpp"
-#include "RandomPlayer.hpp"
 
 namespace training {
     TEST(TicTacToe, hvhGameP1Wins) {

@@ -2,12 +2,12 @@
 
 #pragma once
 
-#include <windows.h>
-#include <string>
 #include <iostream>
+#include <string>
+#include <windows.h>
 #include "Board.hpp"
-#include "Mode.hpp"
 #include "Mark.hpp"
+#include "Mode.hpp"
 #include "UI.hpp"
 
 using std::istream;

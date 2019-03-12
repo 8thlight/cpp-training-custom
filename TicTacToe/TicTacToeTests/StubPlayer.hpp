@@ -3,8 +3,8 @@
 #pragma once
 
 #include <vector>
-#include "../TicTacToe/Player.hpp"
 #include "../TicTacToe/Mark.hpp"
+#include "../TicTacToe/Player.hpp"
 
 using std::vector;
 

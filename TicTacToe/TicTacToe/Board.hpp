@@ -2,8 +2,8 @@
 
 #pragma once
 
-#include <vector>
 #include <array>
+#include <vector>
 #include "Mark.hpp"
 
 using std::vector;

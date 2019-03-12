@@ -2,11 +2,11 @@
 
 #pragma once
 
-#include "Mark.hpp"
 #include "Board.hpp"
+#include "CommandLineUI.hpp"
+#include "Mark.hpp"
 #include "Player.hpp"
 #include "UI.hpp"
-#include "CommandLineUI.hpp"
 
 namespace training {
     class HumanPlayer : public Player {

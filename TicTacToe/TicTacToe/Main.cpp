@@ -1,7 +1,7 @@
 // Copyright 2019 < 8th Light >
 
-#include "TicTacToe.hpp"
 #include "CommandLineUI.hpp"
+#include "TicTacToe.hpp"
 
 int main() {
     training::CommandLineUI clui;

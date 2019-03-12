@@ -4,9 +4,9 @@
 
 #include <vector>
 #include <string>
-#include "Board.hpp"
-#include "Mark.hpp"
-#include "UI.hpp"
+#include "../TicTacToe/Board.hpp"
+#include "../TicTacToe/Mark.hpp"
+#include "../TicTacToe/UI.hpp"
 
 namespace training {
     class StubUI : public UI {

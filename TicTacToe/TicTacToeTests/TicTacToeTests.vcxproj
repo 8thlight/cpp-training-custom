@@ -33,8 +33,8 @@
   <ImportGroup Label="PropertySheets" />
   <PropertyGroup Label="UserMacros" />
   <ItemGroup>
-    <ClInclude Include="..\TicTacToe\StubUI.hpp" />
     <ClInclude Include="StubPlayer.hpp" />
+    <ClInclude Include="StubUI.hpp" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\TicTacToe\Board.cpp" />
@@ -44,14 +44,14 @@
     <ClCompile Include="..\TicTacToe\Player.cpp" />
     <ClCompile Include="..\TicTacToe\RandomPlayer.cpp" />
     <ClCompile Include="..\TicTacToe\TicTacToe.cpp" />
-    <ClCompile Include="..\TicTacToe\TicTacToeTest.cpp" />
-    <ClCompile Include="..\TicTacToe\StubUI.cpp" />
     <ClCompile Include="BoardTest.cpp" />
     <ClCompile Include="CommandLineUITest.cpp" />
     <ClCompile Include="GameTest.cpp" />
     <ClCompile Include="HumanPlayerTest.cpp" />
     <ClCompile Include="RandomPlayerTest.cpp" />
     <ClCompile Include="StubPlayer.cpp" />
+    <ClCompile Include="StubUI.cpp" />
+    <ClCompile Include="TicTacToeTest.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

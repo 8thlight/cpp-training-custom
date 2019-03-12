@@ -4,7 +4,7 @@
 #include "../TicTacToe/Game.hpp"
 #include "../TicTacToe/Player.hpp"
 #include "StubPlayer.hpp"
-#include "../TicTacToe/StubUI.hpp"
+#include "StubUI.hpp"
 
 namespace training {
 

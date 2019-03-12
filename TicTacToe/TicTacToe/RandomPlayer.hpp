@@ -3,8 +3,8 @@
 #pragma once
 
 #include <stdlib.h>
-#include "Player.hpp"
 #include "Board.hpp"
+#include "Player.hpp"
 
 namespace training {
     class RandomPlayer : public Player {
